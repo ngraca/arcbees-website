@@ -1,6 +1,6 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-        xmlns:g="urn:import:com.google.gwt.user.client.ui">
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
 
     <ui:with field="page" type="com.arcbees.website.client.resources.PageBeesResources"/>
     <ui:with field="fonts" type="com.arcbees.website.client.resources.FontResources"/>
@@ -15,10 +15,25 @@
             </div>
         </div>
 
-        <h1>Croustillant Goudreau <span>BE-E-O and founder</span></h1>
+        <h1>Christian Goudreau
+            <span>BEE-EO and co-founder</span>
+        </h1>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis culpa cum cumque, distinctio dolore
-            doloremque error, et illo molestias praesentium provident quasi qui quis quo saepe sunt totam, unde.
+        <p>Christian Goudreau, ArcBees’ CEO, is a self-made entrepreneur with significant experience in project
+            management. Christian has been managing major software development projects since his early teens, and
+            therefore has quickly learned how to juggle heavy responsibilities and deliver.
+        </p>
+        <p>
+            A talented guest speaker, recognized expert in software architecture and developer tools, his services are
+            much sought-after, not only in Quebec but also in Europe and the United States, where he takes great
+            pleasure in sharing his technical knowledge and his passion for business.
+        </p>
+
+        <p>
+            Christian Goudreau was named Young Business Person of the Year, technology &amp; research division, at the Jeune
+            personnalité d’affaires Banque Nationale competition organized by the Jeune chambre de commerce de Québec
+            (JCCQ), in 2012. He was also awarded the Creativity and Innovation Prize, and the Grand Prize at the 2013
+            Annual LOJIQ awards (the Quebec International Youth Offices).
         </p>
 
         <p>

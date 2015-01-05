@@ -1,6 +1,6 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-        xmlns:g="urn:import:com.google.gwt.user.client.ui">
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
 
     <ui:with field="res" type="com.arcbees.website.client.resources.AppResources"/>
     <ui:with field="page" type="com.arcbees.website.client.resources.PageProductResources"/>
@@ -18,13 +18,13 @@
 
         <section class="{res.style.stripe}">
             <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
-                <div class="{res.grid.col} {res.grid.col_1_2}">
-                    <h1>gwt platform
+                <div class="{res.grid.col} {res.grid.col_full}">
+                    <h1>gwtp
                         <a href="#" class="{res.style.anchor}">#</a>
                     </h1>
-                    <h2 class="{page.style.presentation}">The best Model View
-                        <span>Presenter framework</span>
-                        for GWT
+                    <h2 class="{page.style.presentation}">The best
+                        <span>Model-View-Presenter</span>
+                        framework for GWT
                     </h2>
                     <div class="{page.style.socialTop}">
                         <ul class="{page.style.social}">
@@ -44,18 +44,34 @@
 
                 <div class="{res.grid.col} {res.grid.col_push_1_2} {res.grid.col_m_full} {res.grid.col_m_push_0}">
                     <p>
-                        <strong>GWT-Platform (GWTP) is your best friend for building large Google Web Toolkit (GWT) web
-                            apps.
+                        <strong>GWT-Platform (GWTP) is your companion for building large web applications based on
+                            Google Web
+                            Toolkit (GWT).
                         </strong>
                     </p>
-                    <p>Used by hundreds of teams around the world, GWTP will help you push your GWT app to the next
-                        level!
+                    <p>Used by thousands of businesses around the world, GWTP will take your application to
+                        the next level!
                     </p>
-                    <p>Combining powerful features, GWTP is an out-of-the-box solution that supports all the
-                        requirements of modern web apps.
+                    <p>Combining powerful features, GWTP is an out-of-the-box solution that supports all
+                        the requirements of modern development. It handles the tedious work so that you can focus on
+                        developing the core features of your web application, quickly and easily.
                     </p>
                 </div>
             </div>
+        </section>
+
+        <section class="{res.style.stripe} {res.style.centered}">
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                <div class="{res.grid.col} {res.grid.col_m_full} {res.grid.col_m_push_0}">
+                    <a href="#" class="{res.style.btn}">Support</a>
+                    <a href="#" class="{res.style.btn}"><i class="{fonts.icons.iconArrowOutside}"></i>Developer's
+                        Platform
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="{res.style.stripe} {res.style.medium2}">
             <div class="{page.style.slideshow} {res.style.wrapper}">
                 <div class="{page.style.slides}">
                     <g:Image resource="{page.gwtpScreen1}"/>
@@ -83,21 +99,21 @@
         </section>
 
         <section class="{res.style.stripe} {page.style.stripeDetails} {res.style.centered}">
-            <h2>in details</h2>
+            <h2>Features</h2>
         </section>
 
         <section class="{res.style.stripe} {page.style.stripeDetails} {res.style.medium1}">
             <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
 
                 <div class="{res.grid.col} {res.grid.col_1_3}">
-                    <h3>Model View Presenter Framework</h3>
+                    <h3>Easy to Use Framework</h3>
                     <a href="#" class="{res.style.anchor}">#</a>
                 </div>
 
                 <div class="{res.grid.col} {res.grid.col_2_3}">
-                    <p>Web applications need a solid underlying architecture to build upon as they grow. GWTP’s MVP
-                        framework helps you organize your code for scalability right from the start, with a clear
-                        separation of concerns between your UI and your business logic.
+                    <p>Web applications need a solid architecture to build upon as they grow. GWTP’s
+                        Model-View-Presenter (MVP) framework helps you organize your code for scalability right from the
+                        start, cleanly separating the different application layers.
                     </p>
                 </div>
             </div>
@@ -107,13 +123,14 @@
             <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
 
                 <div class="{res.grid.col} {res.grid.col_1_3}">
-                    <h3>dependency injection</h3>
+                    <h3>Boilerplate-Free</h3>
                     <a href="#" class="{res.style.anchor}">#</a>
                 </div>
 
                 <div class="{res.grid.col} {res.grid.col_2_3}">
-                    <p>GWTP was engineered with dependency injection in mind. Leveraging the full power of Google Gin
-                        and Guice, GWTP makes your web apps more modular and testable.
+                    <p>GWTP harnesses the power of GWT code generation to help you reduce the amount of repetitive code
+                        you need to write when building scalable applications. This frees you to focus on what matters
+                        most for your application.
                     </p>
                 </div>
             </div>
@@ -123,13 +140,14 @@
             <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
 
                 <div class="{res.grid.col} {res.grid.col_1_3}">
-                    <h3>history management</h3>
+                    <h3>Flexibility</h3>
                     <a href="#" class="{res.style.anchor}">#</a>
                 </div>
 
                 <div class="{res.grid.col} {res.grid.col_2_3}">
-                    <p>GWTP's PlaceManager makes it trivial to build a blazing fast modern web app that minimizes
-                        client-server roundtrips while making sure the Back button works as users expect.
+                    <p>GWTP was engineered with flexibility in mind. Leveraging the full power of dependency injection,
+                        GWTP makes web apps more modular. By taking advantage of Google Guice and Gin, GWTP ensures you
+                        have the flexibility to use all the other dependencies your application needs.
                     </p>
                 </div>
             </div>
@@ -139,14 +157,14 @@
             <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
 
                 <div class="{res.grid.col} {res.grid.col_1_3}">
-                    <h3>command pattern</h3>
+                    <h3>Client/Server Communication</h3>
                     <a href="#" class="{res.style.anchor}">#</a>
                 </div>
 
                 <div class="{res.grid.col} {res.grid.col_2_3}">
-                    <p>Client/Server communication is made easy using GWTP's integrated command pattern. With it, you
-                        can easily create Actions that are managed by server-side Handlers. Also included: asynchronous
-                        callbacks and server-side Handler protection.
+                    <p>Client/Server communication is made easy using GWTP's communication libraries. The libraries
+                        provided by GWTP helps you write the communication layer of your application using well-known
+                        mechanisms.
                     </p>
                 </div>
             </div>
@@ -156,14 +174,14 @@
             <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
 
                 <div class="{res.grid.col} {res.grid.col_1_3}">
-                    <h3>code splitting</h3>
+                    <h3>Fast</h3>
                     <a href="#" class="{res.style.anchor}">#</a>
                 </div>
 
                 <div class="{res.grid.col} {res.grid.col_2_3}">
-                    <p>Javascript-heavy web applications can take too long to download as your application grows in
-                        size. Thankfully, GWTP comes with effortless and efficient code splitting that will cut through
-                        your application's startup time.
+                    <p>Big web applications can take long to load. Thankfully, GWTP comes with integrated and effortless
+                        ways to cut your application's startup time. Using a technique known as code-splitting, you’ll
+                        never lose a user because your application is slow.
                     </p>
                 </div>
             </div>
@@ -173,125 +191,55 @@
             <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
 
                 <div class="{res.grid.col} {res.grid.col_1_3}">
-                    <h3>mobile ready</h3>
+                    <h3>Maintenance and Evolution</h3>
                     <a href="#" class="{res.style.anchor}">#</a>
                 </div>
 
                 <div class="{res.grid.col} {res.grid.col_2_3}">
-                    <p>GWTP allows you to easily create multiple instances of a Presenter. This lets you reuse the same
-                        widgets and logic throughout your application without duplicating your code.
+                    <p>With GWTP, the maintenance of your application couldn’t be easier. By letting GWTP provide the
+                        framework, you reduce your maintenance workload. The strong framework also makes your app more
+                        evolvable and safe to change.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section class="{res.style.stripe} {page.style.stripeDetails} {res.style.medium3}">
-            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
-
-                <div class="{res.grid.col} {res.grid.col_1_3}">
-                    <h3>Nested Presenters</h3>
-                    <a href="#" class="{res.style.anchor}">#</a>
-                </div>
-
-                <div class="{res.grid.col} {res.grid.col_2_3}">
-                    <p>Web apps usually require a consistent layout across all your pages. The last thing you want to do
-                        is replicate your website header code on every page! GWTP solves that problem using Nested
-                        Presenters, which are loosely coupled and communicate via a shared Event Bus.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="{page.style.moreFeatures} {res.style.stripe}">
-            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
-                <div class="{res.grid.col} {res.grid.col_full} {res.style.centered}">
-                    <h2>more features
-                        <a href="#" class="{res.style.anchor}">#</a>
-                    </h2>
-                </div>
-
-                <div class="{res.grid.col} {res.grid.col_1_2} {res.grid.col_m_full}">
-                    <h3>security</h3>
-                    <p>GWTP allows you to protect your server using Action validation. In addition, you can block
-                        specific pages using custom Gatekeepers. Also included: Automatic XSRF attack detection.
-                    </p>
-                    <h3>google analytics</h3>
-                    <p>With as little as 3 lines of code, your web application will be integrated with Google Analytics.
-                        Also, GWTP allows your website to be easily crawlable by search engines that follow Google's
-                        AJAX Crawling specification.
-                    </p>
-                    <h3>Tabbed Presenters</h3>
-                    <p>Often times you'll want to display a list of links that cause a child Presenter to appear. GWTP
-                        makes it easy to create loosely-coupled Tabbed Presenters that live within their parent
-                        Presenter.
-                    </p>
-                    <h3>maven</h3>
-                    <p>If your project uses Maven, you're all set for GWTP. All the dependencies that you need to
-                        migrate your project to GWTP are published to Maven Central. So, a couple lines in your POM, and
-                        GWTP is ready!
-                    </p>
-                </div>
-                <div class="{res.grid.col} {res.grid.col_1_2} {res.grid.col_m_full}">
-                    <h3>Internationalization</h3>
-                    <p>GWTP makes i18n easy. Using a custom Python script, GWTP will store all your translations in
-                        separate properties files for all languages.
-                    </p>
-                    <h3>Crawlability</h3>
-                    <p>Wondering if it's possible to make crawlable applications with GWTP? Absolutely! GWTP includes a
-                        crawling engine that lets you make any of your asynchronous web sites crawlable - even if you're
-                        not building them in GWTP!
-                    </p>
-                    <h3>Testability</h3>
-                    <p>Because GWTP implements the Model View Presenter design pattern, most of your app logic will be
-                        found inside the Presenters, which can be easily tested using Junit, Mockito and Jukito.
-                    </p>
-                    <h3>Route-like NameTokens</h3>
-                    <p>Want human-readable URLs? With GWTP, your URLs can look like REST calls! Using Route-Like
-                        NameTokens, fussy web addresses like /#userprofile?id=999 can be replaced with
-                        /#/userprofile/999. It’s a format your users will be able to recognize, remember and share.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="{res.style.stripe} {res.style.dark} {res.style.centered}">
+        <section class="{res.style.stripe} {res.style.light} {res.style.centered} {page.style.moreOn}">
             <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
                 <div class="{res.grid.col} {res.grid.col_full}">
+                    <h3>
+                        <ui:msg description="All the documentations you need">more on
+                        </ui:msg>
 
-                    <h3>ALL THE DOCUMENTATIONS
-                        <span>YOU NEED</span>
                     </h3>
-                    <a href="#" class="{res.style.btn}">Go to Arcbees Developers</a>
-
+                    <a href="#" class="{res.style.btn}">
+                        <i class="{fonts.icons.iconArrowOutside}"></i>
+                        <ui:msg description="- BTN - Go to Arcbees Developers">Developer's</ui:msg>
+                        Platform
+                    </a>
                 </div>
             </div>
         </section>
 
         <section class="{res.style.stripe} {page.style.colored} {res.style.centered}">
-            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
-                <div class="{res.grid.col} {res.grid.col_full}">
-
-                    <h3>SHARE</h3>
-                    <ul class="{page.style.social}">
-                        <li>
-                            <a href="#" class="{fonts.icons.iconFb}">
-                                <span class="{res.style.hidden}">Facebook</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="{fonts.icons.iconTwitter}">
-                                <span class="{res.style.hidden}">Twitter</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="{fonts.icons.iconGPlus}">
-                                <span class="{res.style.hidden}">Google</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
+            <h3>SHARE</h3>
+            <ul class="{page.style.social}">
+                <li>
+                    <a href="#" class="{fonts.icons.iconFb}">
+                        <span class="{res.style.hidden}">Facebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="{fonts.icons.iconTwitter}">
+                        <span class="{res.style.hidden}">Twitter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="{fonts.icons.iconGPlus}">
+                        <span class="{res.style.hidden}">Google</span>
+                    </a>
+                </li>
+            </ul>
         </section>
 
     </g:HTMLPanel>

@@ -1,9 +1,9 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-        xmlns:g="urn:import:com.google.gwt.user.client.ui"
-        ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
-        ui:generateKeys="com.google.gwt.i18n.server.keygen.MD5KeyGenerator"
-        ui:generateLocales="default">
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+             ui:generateKeys="com.google.gwt.i18n.server.keygen.MD5KeyGenerator"
+             ui:generateLocales="default">
 
     <ui:import field="com.arcbees.website.client.NameTokens.*"/>
 
@@ -105,7 +105,9 @@
                                     <g:Image resource="{page.beeChristian}"></g:Image>
                                     <a href="#{BEE_CHRISTIAN}">
                                         <h3>Christian Goudreau</h3>
-                                        <p>BEE-EO and co-founder</p>
+                                        <p>
+                                            <ui:msg description="Christian's title">BEE-EO and co-founder</ui:msg>
+                                        </p>
                                     </a>
                                 </div>
                             </div>
@@ -115,9 +117,13 @@
                             <div class="{page.style.beeHolder1}">
                                 <div class="{page.style.beeHolder2}">
                                     <g:Image resource="{page.beeChristian}"></g:Image>
-                                    <a href="#{BEE_CHRISTIAN}">
+                                    <a href="#{BEE_FRANCOIS}">
                                         <h3>François Dion</h3>
-                                        <p>BEE-EO and co-founder</p>
+                                        <p>
+                                            <ui:msg description="François's title">Strategic advisor, associate and
+                                                Board chairman
+                                            </ui:msg>
+                                        </p>
                                     </a>
                                 </div>
                             </div>
@@ -127,9 +133,11 @@
                             <div class="{page.style.beeHolder1}">
                                 <div class="{page.style.beeHolder2}">
                                     <g:Image resource="{page.beeChristian}"></g:Image>
-                                    <a href="#{BEE_CHRISTIAN}">
+                                    <a href="#{BEE_PHILIPPEA}">
                                         <h3>Philippe Araujo</h3>
-                                        <p>BEE-EO and co-founder</p>
+                                        <p>
+                                            <ui:msg description="Philippe Araujo's title">Business Knight</ui:msg>
+                                        </p>
                                     </a>
                                 </div>
                             </div>
@@ -139,9 +147,11 @@
                             <div class="{page.style.beeHolder1}">
                                 <div class="{page.style.beeHolder2}">
                                     <g:Image resource="{page.beeChristian}"></g:Image>
-                                    <a href="#{BEE_CHRISTIAN}">
+                                    <a href="#{BEE_SIMONPIERRE}">
                                         <h3>Simon-Pierre Gingras</h3>
-                                        <p>BEE-EO and co-founder</p>
+                                        <p>
+                                            <ui:msg description="Simon-Pierre's title">Developer of things, Chief Bacon Evangelist</ui:msg>
+                                        </p>
                                     </a>
                                 </div>
                             </div>
@@ -151,9 +161,11 @@
                             <div class="{page.style.beeHolder1}">
                                 <div class="{page.style.beeHolder2}">
                                     <g:Image resource="{page.beeChristian}"></g:Image>
-                                    <a href="#{BEE_CHRISTIAN}">
+                                    <a href="#{BEE_MAXIME}">
                                         <h3>Maxime Mériouma-Caron</h3>
-                                        <p>BEE-EO and co-founder</p>
+                                        <p>
+                                            <ui:msg description="Maxime's title">Night Shadow Developer</ui:msg>
+                                        </p>
                                     </a>
                                 </div>
                             </div>
@@ -163,9 +175,11 @@
                             <div class="{page.style.beeHolder1}">
                                 <div class="{page.style.beeHolder2}">
                                     <g:Image resource="{page.beeChristian}"></g:Image>
-                                    <a href="#{BEE_CHRISTIAN}">
+                                    <a href="#{BEE_CHRISTOPHER}">
                                         <h3>Christopher Viel</h3>
-                                        <p>BEE-EO and co-founder</p>
+                                        <p>
+                                            <ui:msg description="Christopher title">Crazy Code Mastermind</ui:msg>
+                                        </p>
                                     </a>
                                 </div>
                             </div>
@@ -175,9 +189,11 @@
                             <div class="{page.style.beeHolder1}">
                                 <div class="{page.style.beeHolder2}">
                                     <g:Image resource="{page.beeChristian}"></g:Image>
-                                    <a href="#{BEE_CHRISTIAN}">
+                                    <a href="#{BEE_JOEL}">
                                         <h3>Joel Trottier-Hébert</h3>
-                                        <p>BEE-EO and co-founder</p>
+                                        <p>
+                                            <ui:msg description="Joel's title">Bugs writer</ui:msg>
+                                        </p>
                                     </a>
                                 </div>
                             </div>
@@ -187,9 +203,11 @@
                             <div class="{page.style.beeHolder1}">
                                 <div class="{page.style.beeHolder2}">
                                     <g:Image resource="{page.beeChristian}"></g:Image>
-                                    <a href="#{BEE_CHRISTIAN}">
+                                    <a href="#{BEE_MANON}">
                                         <h3>Manon Gruaz</h3>
-                                        <p>BEE-EO and co-founder</p>
+                                        <p>
+                                            <ui:msg description="Manon's title">Lead Designer, Branding goddess and Loving Bee</ui:msg>
+                                        </p>
                                     </a>
                                 </div>
                             </div>
@@ -199,9 +217,11 @@
                             <div class="{page.style.beeHolder1}">
                                 <div class="{page.style.beeHolder2}">
                                     <g:Image resource="{page.beeChristian}"></g:Image>
-                                    <a href="#{BEE_CHRISTIAN}">
+                                    <a href="#{BEE_LARRY}">
                                         <h3>Larry Matte</h3>
-                                        <p>BEE-EO and co-founder</p>
+                                        <p>
+                                            <ui:msg description="Larry's title">Undercover Front-end Agent</ui:msg>
+                                        </p>
                                     </a>
                                 </div>
                             </div>
@@ -211,9 +231,11 @@
                             <div class="{page.style.beeHolder1}">
                                 <div class="{page.style.beeHolder2}">
                                     <g:Image resource="{page.beeChristian}"></g:Image>
-                                    <a href="#{BEE_CHRISTIAN}">
+                                    <a href="#{BEE_JASON}">
                                         <h3>Jason Lemay</h3>
-                                        <p>BEE-EO and co-founder</p>
+                                        <p>
+                                            <ui:msg description="Jason's title">Dual wielding Front-end Specialist</ui:msg>
+                                        </p>
                                     </a>
                                 </div>
                             </div>
@@ -223,9 +245,11 @@
                             <div class="{page.style.beeHolder1}">
                                 <div class="{page.style.beeHolder2}">
                                     <g:Image resource="{page.beeChristian}"></g:Image>
-                                    <a href="#{BEE_CHRISTIAN}">
+                                    <a href="#{BEE_JEANCHRISTOPHE}">
                                         <h3>Jean-Christophe Lariviere</h3>
-                                        <p>BEE-EO and co-founder</p>
+                                        <p>
+                                            <ui:msg description="Jean-Christophe's title">Coder in the North</ui:msg>
+                                        </p>
                                     </a>
                                 </div>
                             </div>
@@ -235,9 +259,11 @@
                             <div class="{page.style.beeHolder1}">
                                 <div class="{page.style.beeHolder2}">
                                     <g:Image resource="{page.beeChristian}"></g:Image>
-                                    <a href="#{BEE_CHRISTIAN}">
+                                    <a href="#{BEE_GENEVIEVE}">
                                         <h3>Geneviève Doyle</h3>
-                                        <p>BEE-EO and co-founder</p>
+                                        <p>
+                                            <ui:msg description="Geneviève's title">Attorney</ui:msg>
+                                        </p>
                                     </a>
                                 </div>
                             </div>
@@ -247,7 +273,27 @@
                             <div class="{page.style.beeHolder1}">
                                 <div class="{page.style.beeHolder2}">
                                     <g:Image resource="{page.beeChristian}"></g:Image>
+                                    <a href="#{BEE_JULIEN}">
+                                        <h3>Julien Dramaix</h3>
+                                        <p>
+                                            <ui:msg description="Julien's title">Lead Software Engineer, Bee-r cool-er</ui:msg>
+                                        </p>
+                                    </a>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="{page.style.bee} {page.style.bee2}">
+                        <div class="{page.style.beeHolder1}">
+                            <div class="{page.style.beeHolder2}">
+                                <g:Image resource="{page.beeChristian}"></g:Image>
+                                <a href="#{BEE_PHILIPPEB}">
+                                    <h3>Philippe Beaudoin</h3>
+                                    <p>
+                                        <ui:msg description="Philippe Beaudoin's title">Advisor and co-founder</ui:msg>
+                                    </p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -267,15 +313,12 @@
         <section class="{res.style.stripe} {res.style.dark} {res.style.centered}">
             <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
                 <div class="{res.grid.col} {res.grid.col_full}">
-
                     <h2>calculate
                         <span>your bee-attitude</span>
                     </h2>
-
                     <p>
                         <a href="#" class="{res.style.btn}">Go, I'm ready to beeez</a>
                     </p>
-
                 </div>
             </div>
         </section>
@@ -287,7 +330,9 @@
             <div class="{res.style.stripe}">
                 <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
                     <div class="{res.grid.col} {res.grid.col_full}">
-                        <h3>Software engineer</h3>
+                        <h3>
+                            <ui:msg description="Software Engineer">Software Engineer</ui:msg>
+                        </h3>
                         <a href="#" class="{res.style.btn}">How can you be the best programmer you can be</a>
                     </div>
                 </div>
@@ -295,7 +340,9 @@
             <div class="{res.style.stripe}">
                 <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
                     <div class="{res.grid.col} {res.grid.col_full}">
-                        <h3>Web developer</h3>
+                        <h3>
+                            <ui:msg description="Web Developer">Web Developer</ui:msg>
+                        </h3>
                         <a href="#" class="{res.style.btn}">Awesome CSS Master</a>
                     </div>
                 </div>
@@ -303,7 +350,9 @@
             <div class="{res.style.stripe}">
                 <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
                     <div class="{res.grid.col} {res.grid.col_full}">
-                        <h3>Designer slave</h3>
+                        <h3>
+                            <ui:msg description="Designer Slave">Designer Slave</ui:msg>
+                        </h3>
                         <a href="#" class="{res.style.btn}">We hope you like to suffer</a>
                     </div>
                 </div>

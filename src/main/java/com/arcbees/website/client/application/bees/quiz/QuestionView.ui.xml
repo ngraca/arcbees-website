@@ -15,7 +15,7 @@
     <g:HTMLPanel>
         <div ui:field="questions">
             <label>Q.
-                <span ui:field="questionNumber"/>
+                <span ui:field="questionNumberSpan"/>
             </label>
             <p ui:field="question"/>
             <label for="answer1">

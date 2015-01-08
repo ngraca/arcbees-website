@@ -38,10 +38,12 @@ public class QuestionView extends ViewWithUiHandlers<QuestionUiHandlers>
     @UiField
     DivElement questions;
     @UiField
-    SpanElement questionNumber;
+    SpanElement questionNumberSpan;
 
     private final QuizMessages quizMessages;
     private final AppResources resources;
+
+    private int questionNumber;
 
     @Inject
     QuestionView(
@@ -60,8 +62,10 @@ public class QuestionView extends ViewWithUiHandlers<QuestionUiHandlers>
     public void setQuestion(int questionNumber) {
         setQuestionsVisible(true);
 
+        this.questionNumber = questionNumber;
+
         question.setInnerText(quizMessages.question(questionNumber));
-        this.questionNumber.setInnerText(String.valueOf(questionNumber));
+        this.questionNumberSpan.setInnerText(String.valueOf(questionNumber));
 
         $(answer1Image).attr("title", quizMessages.answer1(questionNumber));
         $(answer2Image).attr("title", quizMessages.answer2(questionNumber));
@@ -79,6 +83,7 @@ public class QuestionView extends ViewWithUiHandlers<QuestionUiHandlers>
     @Override
     public void onAttachOrDetach(AttachEvent attachEvent) {
         if (attachEvent.isAttached()) {
+            setQuestion(questionNumber);
             createTooltips();
         } else {
             destroyTooltips();

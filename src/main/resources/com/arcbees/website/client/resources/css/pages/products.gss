@@ -263,11 +263,21 @@
 
 @media (max-width: 649px) {
     .menuHeader a {
-        font-size: 6rem;
+        display: none;
     }
 
     .menuHeader a.active {
-        font-size: 8rem;
+        font-size: 20rem;
+
+        display: block;
+        margin-left: -100px;
+
+        position: absolute;
+        left: 50%;
+    }
+
+    .productHead .arrow {
+        display: none;
     }
 
     .productHead .arrow::after {

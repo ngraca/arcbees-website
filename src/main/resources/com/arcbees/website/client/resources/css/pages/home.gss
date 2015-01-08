@@ -76,13 +76,13 @@
 
 @-webkit-keyframes beesMobile {
     0% {transform: translate(0px, 0px);}
-    100% {transform: translate(130px, 0px);}
+    100% {transform: translate(125px, 0px);}
 }
 
 @if (!is("locale",  "en")) {
     @-webkit-keyframes bees {
         0% {transform: translate(0px, 0px);}
-        100% {transform: translate(355px, 0px);}
+        100% {transform: translate(0px, 70px);}
     }
 }
 
@@ -163,6 +163,16 @@
         font-size: 25rem;
 
         margin: -142px 0 0 -112px;
+    }
+
+    .home .header .txtAre {
+        margin-left: 10px;
+    }
+
+    .home .header .txtBees {
+        left: 70px;
+
+    @mixin animation_name(beesMobile);
     }
 
     .home .header .txtBees {

@@ -290,11 +290,7 @@
 
 @media (max-width: 649px) {
     .home .ssiconsHexa {
-        margin-left: -265px;
-
-        top: 23px;
-
-        zoom: .55;
+        display: none;
     }
 
     .home .successStory {
@@ -303,6 +299,10 @@
 
     .home .successStory i {
         font-size: 6.5em;
+    }
+
+    .home .successStoryMore {
+        background: none;
     }
 }
 
@@ -499,6 +499,10 @@
 
     .home .header .btns a {
         margin: 0px;
+    }
+
+    .home .successStoryMore a {
+        margin: 2em 0;
     }
 }
 

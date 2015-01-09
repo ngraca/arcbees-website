@@ -88,6 +88,9 @@ public interface PageHomeResources extends FontResources {
     @Source("img/pages/homeSuccessStoryIcons.png")
     ImageResource ssicons();
 
+    @Source("img/pages/homeSuccessStoryIconsMobile.png")
+    ImageResource ssiconsMobile();
+
     @Source("img/pages/homeSuccessStoryRainbow.png")
     ImageResource ssrainbow();
 

@@ -117,6 +117,10 @@ public interface AppResources extends FontResources {
         String visuallyhidden();
 
         String clicked();
+
+        String mobileHidden();
+
+        String mobileVisible();
     }
 
     @Source("css/normalize.gss")

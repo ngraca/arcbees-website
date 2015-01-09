@@ -16,6 +16,8 @@
 
 package com.arcbees.website.client.resources;
 
+import com.arcbees.website.client.resources.ui.CarouselResources;
+
 import javax.inject.Inject;
 
 public class ResourceLoader {
@@ -33,7 +35,8 @@ public class ResourceLoader {
             PageHomeResources pageHomeResources,
             PageBeesResources pageBeesResources,
             PageExpertisesResources pageExpertisesResources,
-            PageSupportResources pageSupportResources) {
+            PageSupportResources pageSupportResources,
+            CarouselResources carouselResources) {
         appResources.normalize().ensureInjected();
         appResources.style().ensureInjected();
         appResources.grid().ensureInjected();
@@ -49,5 +52,6 @@ public class ResourceLoader {
         pageExpertisesResources.style().ensureInjected();
         pageSupportResources.style().ensureInjected();
         pageBeesResources.style().ensureInjected();
+        carouselResources.style().ensureInjected();
     }
 }

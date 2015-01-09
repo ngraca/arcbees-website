@@ -1,6 +1,7 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
         xmlns:g="urn:import:com.google.gwt.user.client.ui"
+        xmlns:u="urn:import:com.arcbees.website.client.application.ui"
         ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
         ui:generateKeys="com.google.gwt.i18n.server.keygen.MD5KeyGenerator"
         ui:generateLocales="default">
@@ -9,6 +10,7 @@
     <ui:with field="page" type="com.arcbees.website.client.resources.PageSupportResources"/>
     <ui:with field="fonts" type="com.arcbees.website.client.resources.FontResources"/>
     <ui:with field="animations" type="com.arcbees.website.client.resources.AnimationsResources"/>
+    <ui:with field="carousel" type="com.arcbees.website.client.resources.ui.CarouselResources"/>
 
     <ui:import field="com.arcbees.website.client.NameTokens.*"/>
 
@@ -52,7 +54,7 @@
         </section>
 
         <section class="{res.style.stripe} {res.style.colored}">
-            <div class="">
+            <div>
                 <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper} {res.style.centered}">
                     <div class="{res.grid.col} {res.grid.col_1_3} {res.grid.col_push_1_3} {res.grid.col_m_full} {res.grid.col_m_push_0}">
                         <ui:msg description="Purchasing support packages...">
@@ -201,7 +203,7 @@
         </section>
 
         <section class="{res.style.stripe} {res.style.light} {page.style.features}">
-            <div class="{res.style.stripe} {res.style.light} {res.style.centered}">
+            <div class="{res.style.centered}">
                 <a href="#" class="{res.style.btn}">
                     <ui:msg description="- BTN - Contact us">Contact us</ui:msg>
                 </a>
@@ -282,6 +284,51 @@
                         </p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="{res.style.stripe} {res.style.light} {res.style.centered}">
+            <div class="{res.style.wrapper}">
+                <h2>Products</h2>
+                <p>You can use one or several solutions to build your own hive!</p>
+
+                <u:Carousel>
+                    <div>
+                        <h3>GWTP 1</h3>
+                        <p>The best Model View Presenter framework for GWT</p>
+                        <p>
+                            <a href="#" class="{res.style.btn}">Learn more</a>
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Jukito 2</h3>
+                        <p>The best Jukito</p>
+                        <p>
+                            <a href="#" class="{res.style.btn}">Learn more</a>
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Jukito 3</h3>
+                        <p>The best Jukito</p>
+                        <p>
+                            <a href="#" class="{res.style.btn}">Learn more</a>
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Jukito 4</h3>
+                        <p>The best Jukito</p>
+                        <p>
+                            <a href="#" class="{res.style.btn}">Learn more</a>
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Jukito 5</h3>
+                        <p>The best Jukito</p>
+                        <p>
+                            <a href="#" class="{res.style.btn}">Learn more</a>
+                        </p>
+                    </div>
+                </u:Carousel>
             </div>
         </section>
 

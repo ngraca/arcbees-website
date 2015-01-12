@@ -18,12 +18,12 @@ package com.arcbees.website.client.application.bees.quiz;
 
 import javax.inject.Inject;
 
+import com.arcbees.analytics.shared.Analytics;
 import com.arcbees.gquery.tooltip.client.TooltipOptions;
 import com.arcbees.website.client.resources.AppResources;
 import com.arcbees.website.client.resources.PageBeesResources.QuizMessages;
 import com.arcbees.website.client.resources.PageBeesTooltipResources;
 import com.google.gwt.dom.client.DivElement;
-import com.google.gwt.dom.client.HeadingElement;
 import com.google.gwt.dom.client.ParagraphElement;
 import com.google.gwt.dom.client.SpanElement;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -51,6 +51,7 @@ public class QuestionView extends ViewWithUiHandlers<QuestionUiHandlers>
     @UiField
     SpanElement questionNumber;
 
+    private final Analytics analytics;
     private final QuizMessages quizMessages;
     private final AppResources resources;
     private final PageBeesTooltipResources pageBeesTooltipResources;
@@ -58,9 +59,11 @@ public class QuestionView extends ViewWithUiHandlers<QuestionUiHandlers>
     @Inject
     QuestionView(
             Binder binder,
+            Analytics analytics,
             QuizMessages quizMessages,
             AppResources resources,
             PageBeesTooltipResources pageBeesTooltipResources) {
+        this.analytics = analytics;
         this.quizMessages = quizMessages;
         this.resources = resources;
         this.pageBeesTooltipResources = pageBeesTooltipResources;
@@ -78,7 +81,11 @@ public class QuestionView extends ViewWithUiHandlers<QuestionUiHandlers>
         this.questionNumber.setInnerText(String.valueOf(questionNumber));
 
         $(questions).attr("data-question", questionNumber);
-        $("input", questions).removeAttr("checked");
+
+        if ($("input[name='quiz']").is(":checked")) {
+            analytics.sendEvent("Quiz", "Question " + (questionNumber - 1)).eventLabel($("input[name='quiz']:checked").val()).go();
+            $("input", questions).removeAttr("checked");
+        }
 
         $("#answer1 + label").attr("title", quizMessages.answer1(questionNumber));
         $("#answer2 + label").attr("title", quizMessages.answer2(questionNumber));
@@ -90,6 +97,11 @@ public class QuestionView extends ViewWithUiHandlers<QuestionUiHandlers>
 
     @Override
     public void setQuizFinished() {
+        if ($("input[name='quiz']").is(":checked")) {
+            analytics.sendEvent("Quiz", "Question 5").eventLabel($("input[name='quiz']:checked").val()).go();
+            $("input", questions).removeAttr("checked");
+        }
+        analytics.sendEvent("Bees", "Click").eventLabel("Quiz - Completed").go();
         setQuestionsVisible(false);
     }
 

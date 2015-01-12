@@ -16,6 +16,7 @@
 
 package com.arcbees.website.client.application.bees;
 
+import com.arcbees.analytics.shared.Analytics;
 import com.arcbees.website.client.resources.PageBeesResources;
 import com.google.gwt.dom.client.AnchorElement;
 import com.google.gwt.dom.client.BrowserEvents;
@@ -42,6 +43,7 @@ public class BeesView extends ViewWithUiHandlers<BeesUiHandlers> implements Bees
     interface Binder extends UiBinder<Widget, BeesView> {
     }
 
+    private final Analytics analytics;
     private final PageBeesResources pageBeesResources;
 
     @UiField
@@ -62,7 +64,9 @@ public class BeesView extends ViewWithUiHandlers<BeesUiHandlers> implements Bees
     @Inject
     BeesView(
             Binder binder,
+            Analytics analytics,
             final PageBeesResources pageBeesResources) {
+        this.analytics = analytics;
         this.pageBeesResources = pageBeesResources;
 
         initWidget(binder.createAndBindUi(this));
@@ -132,6 +136,7 @@ public class BeesView extends ViewWithUiHandlers<BeesUiHandlers> implements Bees
     @UiHandler("initQuizButton")
     void onInitQuizButton(ClickEvent event) {
         $(quizTitle).hide();
+        analytics.sendEvent("Bees", "Click").eventLabel("Quiz - Start").go();
         getUiHandlers().onInitQuiz();
     }
 }

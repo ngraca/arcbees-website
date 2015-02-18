@@ -1,0 +1,261 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+        xmlns:g="urn:import:com.google.gwt.user.client.ui"
+        xmlns:slider="urn:import:com.arcbees.website.client.application.slider"
+        xmlns:seo="urn:import:com.arcbees.seo.widget"
+        ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+        ui:generateKeys="com.google.gwt.i18n.server.keygen.MD5KeyGenerator"
+        ui:generateLocales="default">
+
+    <ui:with field="nameTokens" type="com.arcbees.website.client.NameTokensConstants"/>
+    <ui:with field="res" type="com.arcbees.website.client.resources.AppResources"/>
+    <ui:with field="page" type="com.arcbees.website.client.resources.PageProductResources"/>
+    <ui:with field="fonts" type="com.arcbees.website.client.resources.FontResources"/>
+
+    <g:HTMLPanel styleName="{page.style.products} {page.style.gquery}">
+
+        <seo:SeoWidget>
+            <seo:Title>
+                <ui:msg description="SEO - Products - GQuery - title">GQuery - Products - Arcbees</ui:msg>
+            </seo:Title>
+            <seo:Description>
+                <ui:msg description="SEO - Products - GQuery - description">
+                    GwtQuery or GQuery is an entire GWT rewrite of the famous jQuery javascript library.
+                </ui:msg>
+            </seo:Description>
+            <seo:Og>
+                <seo:OgImage height="630" width="1200">http://www.arcbees.com/img/facebook-gquery.png</seo:OgImage>
+            </seo:Og>
+        </seo:SeoWidget>
+
+        <nav class="{res.style.breadcrumb} {res.style.withLogo}">
+            <ul>
+                <li><ui:msg description="product">PRODUCT</ui:msg></li>
+                <li>GQUERY</li>
+            </ul>
+        </nav>
+
+        <section class="{res.style.stripe}">
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                <div class="{res.grid.col} {res.grid.col_10} {res.grid.col_m_full}">
+                    <h1>GQUERY
+                        <a href="https://github.com/gwtquery" target="_blank" class="{res.style.anchor}">#</a>
+                    </h1>
+                    <h2 class="{page.style.presentation}">
+                        <ui:msg description="A jQuery clone for GWT">A jQuery clone for GWT,
+                            <span>and much more</span>
+                        </ui:msg>
+                    </h2>
+                    <div class="{page.style.socialTop}">
+                        <ul class="{page.style.social}">
+                            <li>
+                                <a href="https://plus.google.com/108775699626209449984/posts" target="_blank" class="{fonts.icons.iconGPlus}">
+                                    <span class="{res.style.hidden}">Google plus</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/gwtquery" target="_blank" class="{fonts.icons.iconGitHub}">
+                                    <span class="{res.style.hidden}">Github</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                <div class="{res.grid.col} {res.grid.col_push_1_2} {res.grid.col_m_full} {res.grid.col_m_push_0}">
+                    <p>
+                        <strong>
+                            <ui:msg description="Write less. Do more!...">“Write less. Do more”! GwtQuery or GQuery is
+                                an entire GWT rewrite of the famous jQuery javascript library.
+                            </ui:msg>
+                        </strong>
+                    </p>
+                    <p>
+                        <ui:msg description="Write less. Do more!... - Paragraphe -">It lets you use the jQuery API in
+                            GWT applications without including the jQuery source code, while leveraging the
+                            optimizations and type safety provided by GWT. Traversing and manipulating the dom, event
+                            handling, animations or doing Ajax requests are easy now thanks to GQuery.
+                        </ui:msg>
+                    </p>
+                </div>
+            </div>
+            <div class="{page.style.btns} {res.grid.row} {res.style.clearfix} {res.style.wrapper} {res.style.centered}">
+                <div class="{res.grid.col} {res.grid.col_12}">
+                    <a href="#{nameTokens.SUPPORT}" class="{res.style.btn}">
+                        <ui:msg description="Support">Support</ui:msg>
+                    </a>
+                    <a href="https://github.com/gwtquery" target="_blank" class="{res.style.btn}">
+                        <i class="{fonts.icons.iconArrowOutside}"></i>
+                        <ui:msg description="- BTN - Developers Platform">Developer's Platform</ui:msg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="{res.style.stripe} {page.style.stripeDetails} {res.style.centered}">
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                <div class="{res.grid.col} {res.grid.col_1_2} {res.grid.col_m_full}">
+                    <p><strong>
+                        <ui:msg description="Jquery's code">Jquery's code</ui:msg>
+                    </strong></p>
+                    <g:Image resource="{page.jqueryScreen}"/>
+                </div>
+                <div class="{res.grid.col} {res.grid.col_1_2} {res.grid.col_m_full}">
+                    <p><strong>
+                        <ui:msg description="Gquery's code">Gquery's code</ui:msg>
+                    </strong></p>
+                    <g:Image resource="{page.gqueryScreen}"/>
+                </div>
+            </div>
+        </section>
+
+        <section class="{res.style.stripe} {page.style.stripeDetails} {res.style.centered}">
+            <h2>
+                <ui:msg description="Features">Features</ui:msg>
+            </h2>
+        </section>
+
+        <section class="{res.style.stripe} {page.style.stripeDetails}">
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                <div class="{res.grid.col} {res.grid.col_1_3} {res.grid.col_m_full}">
+                    <h3>
+                        <ui:msg description="It Looks Like jQuery">It Looks Like jQuery</ui:msg>
+                    </h3>
+                </div>
+                <div class="{res.grid.col} {res.grid.col_2_3} {res.grid.col_m_full}">
+                    <ui:msg description="It Looks Like jQuery - Paragraph -">
+                        <p>
+                            <strong>The syntax of GQuery is almost identical to jQuery.</strong>
+                        </p>
+                        <p>
+                            The API and syntax of GQuery strongly resembles jQuery. Existing jQuery code can be easily
+                            adapted into GQuery and used in your GWT applications.
+                        </p>
+                    </ui:msg>
+                </div>
+            </div>
+        </section>
+
+        <section class="{res.style.stripe} {page.style.stripeDetails} {res.style.medium1}">
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                <div class="{res.grid.col} {res.grid.col_1_3} {res.grid.col_m_full}">
+                    <h3>
+                        <ui:msg description="Easy DOM Manipulation">Easy DOM Manipulation</ui:msg>
+                    </h3>
+                </div>
+                <div class="{res.grid.col} {res.grid.col_2_3} {res.grid.col_m_full}">
+                    <ui:msg description="Easy DOM Manipulation - Paragraph -">
+                        <p>
+                            <strong>GQuery eases traversal and manipulation of
+                                the DOM.
+                            </strong>
+                        </p>
+                        <p>
+                            With its chaining method syntax, you can select several elements and modify them in one line
+                            of code.
+                        </p>
+                    </ui:msg>
+                </div>
+            </div>
+        </section>
+
+        <section class="{res.style.stripe} {page.style.stripeDetails}">
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                <div class="{res.grid.col} {res.grid.col_1_3} {res.grid.col_m_full}">
+                    <h3>
+                        <ui:msg description="Full GWT Widget Integration">Full GWT Widget Integration</ui:msg>
+                    </h3>
+                </div>
+                <div class="{res.grid.col} {res.grid.col_2_3} {res.grid.col_m_full}">
+                    <ui:msg description="Full GWT Widget Integration - Paragraph -">
+                        <p>
+                            <strong>Whatever you do with elements, you can now do with widgets
+                            </strong>
+                        </p>
+                        <p>GQuery lets you query-enhance, manipulate or modify GWT widgets present in the DOM.</p>
+                    </ui:msg>
+                </div>
+            </div>
+        </section>
+
+        <section class="{res.style.stripe} {page.style.stripeDetails} {res.style.medium1}">
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                <div class="{res.grid.col} {res.grid.col_1_3} {res.grid.col_m_full}">
+                    <h3>
+                        <ui:msg description="Promises">Promises</ui:msg>
+                    </h3>
+                </div>
+                <div class="{res.grid.col} {res.grid.col_2_3} {res.grid.col_m_full}">
+                    <p>
+                        <ui:msg description="Promises - Paragraph -">GQuery implements the promises API existing
+                            in jQuery. So that you can use it as an alternative to traditional callback-based
+                            approaches.
+                        </ui:msg>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="{res.style.stripe} {page.style.stripeDetails}">
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                <div class="{res.grid.col} {res.grid.col_1_3} {res.grid.col_m_full}">
+                    <h3>
+                        <ui:msg description="Easy Ajax Syntax">Easy Ajax Syntax</ui:msg>
+                    </h3>
+                </div>
+                <div class="{res.grid.col} {res.grid.col_2_3} {res.grid.col_m_full}">
+                    <ui:msg description="Easy Ajax Syntax - Paragraph -">
+                        <p>
+                            <strong>GQuery facilitates communication with servers via asynchronous HTTP requests
+                            </strong>
+                        </p>
+                        <p>GQuery provides a simple API for sending Ajax requests. It also ships an easy data
+                            binding
+                            system to and from JSON or XML.
+                        </p>
+                    </ui:msg>
+                </div>
+            </div>
+        </section>
+
+        <section class="{res.style.stripe} {page.style.stripeDetails} {res.style.medium1}">
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                <div class="{res.grid.col} {res.grid.col_1_3} {res.grid.col_m_full}">
+                    <h3>
+                        <ui:msg description="Event Handling">Event Handling</ui:msg>
+                    </h3>
+                </div>
+                <div class="{res.grid.col} {res.grid.col_2_3} {res.grid.col_m_full}">
+                    <ui:msg description="Event Handling - Paragraph -">
+                        <p>
+                            <strong>Handle all browser events and more</strong>
+                        </p>
+                        <p>
+                            With GQuery, you will be able to handle any event fired by browsers. In addition, you can
+                            fire and handle your own custom events. You will be able also to implement event delegation
+                            with one line of code!
+                        </p>
+                    </ui:msg>
+                </div>
+            </div>
+        </section>
+
+        <section class="{res.style.stripe} {res.style.light} {res.style.centered} {page.style.moreOn}">
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                <div class="{res.grid.col} {res.grid.col_full}">
+                    <h3>
+                        <ui:msg description="more on">more on
+                        </ui:msg>
+                    </h3>
+                    <a href="https://github.com/gwtquery" target="_blank" title="Developer's Platform" class="{res.style.btn}">
+                        <ui:attribute ui:name='title' ui:description='Developer Platform'/>
+                        <i class="{fonts.icons.iconArrowOutside}"></i>
+                        <ui:msg description="- BTN - Developers Platform">Developer's Platform</ui:msg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </g:HTMLPanel>
+</ui:UiBinder>

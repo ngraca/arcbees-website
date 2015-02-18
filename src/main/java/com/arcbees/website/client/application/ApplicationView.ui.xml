@@ -1,0 +1,166 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+        xmlns:g="urn:import:com.google.gwt.user.client.ui"
+        xmlns:seo="urn:import:com.arcbees.seo.widget"
+        ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+        ui:generateKeys="com.google.gwt.i18n.server.keygen.MD5KeyGenerator"
+        ui:generateLocales="default">
+
+    <ui:with field="nameTokens" type="com.arcbees.website.client.NameTokensConstants"/>
+    <ui:with field="res" type="com.arcbees.website.client.resources.AppResources"/>
+    <ui:with field="fonts" type="com.arcbees.website.client.resources.FontResources"/>
+
+    <g:HTMLPanel>
+
+        <seo:SeoWidget>
+            <seo:Keywords>
+                <ui:msg description="SEO - Home - keywords">Arcbees, Web, development, GWT, GWTP, Jukito, GAE, GQuery, GSSS, Chosen, Java, Quebec, Canada</ui:msg>
+            </seo:Keywords>
+            <seo:Og>
+                <seo:OgImage height="630" width="1200">http://www.arcbees.com/img/facebook.png</seo:OgImage>
+                <seo:OgType typeValue="WEBSITE"/>
+            </seo:Og>
+        </seo:SeoWidget>
+
+        <div class="{res.style.sidebar}" ui:field="sidebar">
+            <nav role="navigation" class="{res.style.menu}">
+                <ul>
+                    <li>
+                        <a href="#{nameTokens.HOME}" class="{fonts.icons.iconArcbeesName} {res.style.backHome}">
+                            <span class="{res.style.hidden}">Back to homepage</span>
+                        </a>
+                    </li>
+                    <li class="{res.style.menuStart}">
+                        <a href="#{nameTokens.HOME}">
+                            <ui:msg description="About">About</ui:msg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#{nameTokens.EXPERTISE}">Expertise</a>
+                    </li>
+                    <li>
+                        <a href="#{nameTokens.SERVICES}">Services</a>
+                    </li>
+                    <li>
+                        <a href="#{nameTokens.PRODUCTS}">
+                            <ui:msg description="Products">Products</ui:msg>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#{nameTokens.GAE}" class="{fonts.icons.iconGae}">GAE Studio</a>
+                            </li>
+                            <li>
+                                <a href="#{nameTokens.JUKITO}" class="{fonts.icons.iconJukito}">Jukito</a>
+                            </li>
+                            <li>
+                                <a href="#{nameTokens.GWTP}" class="{fonts.icons.iconGwtp}">GWTP</a>
+                            </li>
+                            <li>
+                                <a href="#{nameTokens.CHOSEN}" class="{fonts.icons.iconChosen}">Chosen</a>
+                            </li>
+                            <li>
+                                <a href="#{nameTokens.GQUERY}" class="{fonts.icons.iconGquery}">GQuery</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#{nameTokens.SUPPORT}">Support</a>
+                    </li>
+                    <li>
+                        <a href="#{nameTokens.BEES}">
+                            <ui:msg description="Our bees">Our bees</ui:msg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#{nameTokens.CONTACT}" class="{res.style.menuContact}">Contact</a>
+                    </li>
+                    <li>
+                        <a href="http://dev.arcbees.com/" target="_blank">
+                            <ui:msg description="Developers">Developers</ui:msg>
+                            <i class="{fonts.icons.iconArrowOutside}"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="{res.style.socialmedias}">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/arcbees" class="{fonts.icons.iconFb}" target="_blank">
+                            <span class="{res.style.hidden}">Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/ArcBees" class="{fonts.icons.iconTwitter}" target="_blank">
+                            <span class="{res.style.hidden}">Twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/+Arcbees/posts" class="{fonts.icons.iconGPlus}" target="_blank">
+                            <span class="{res.style.hidden}">Google</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/arcbees" class="{fonts.icons.iconLkd}" target="_blank">
+                            <span class="{res.style.hidden}">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/ArcBees" class="{fonts.icons.iconGitHub}" target="_blank">
+                            <span class="{res.style.hidden}">GitHub</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://arcbees.wordpress.com/" class="{fonts.icons.iconWordpress}" target="_blank">
+                            <span class="{res.style.hidden}">Wordpress</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div ui:field="menuToggle" class="{res.style.menuToggle}">
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+
+        <div class="{res.style.content}" ui:field="content">
+            <a href="#{nameTokens.HOME}" class="{fonts.icons.iconArcbees} {res.style.homeLogo} {res.style.withLogo}"></a>
+            <div ui:field="langToggle" class="{res.style.wrapper}">
+                <div class="{res.style.linkTopRight}">
+                    <span class="{res.style.language}">
+                        <a href="#" lang="fr" title="French version">
+                            <ui:attribute ui:name='title' ui:description='French version'/>
+                            <ui:attribute ui:name='lang' ui:description='fr'/>
+                            <ui:msg description="FR">FR
+                                <span class="{res.style.visuallyhidden}">ANÇAIS</span>
+                            </ui:msg>
+                        </a>
+                    </span>
+                    <a href="https://github.com/ArcBees" title="Arcbees github" target="_blank">
+                        <i class="{fonts.icons.iconGitHub} {res.style.github}"></i>
+                    </a>
+                </div>
+
+            </div>
+            <!-- Main content -->
+            <g:SimplePanel ui:field="main" styleName="{res.style.main}"/>
+
+            <footer class="{res.style.footer}">
+                <div class="{res.style.backTop}">
+                    <i ui:field="backTop" class="{fonts.icons.iconArrowDown}"></i>
+                </div>
+                <p>
+                    <i class="{fonts.icons.iconArcbees}">
+                        <span class="{res.style.hidden}">Arcbees</span>
+                    </i>
+                    <ui:msg description="Architects of simplicity">Architects of simplicity</ui:msg>
+                </p>
+            </footer>
+
+        </div>
+
+    </g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,404 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+        xmlns:g="urn:import:com.google.gwt.user.client.ui"
+        xmlns:slider="urn:import:com.arcbees.website.client.application.slider"
+        xmlns:seo="urn:import:com.arcbees.seo.widget"
+        ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+        ui:generateKeys="com.google.gwt.i18n.server.keygen.MD5KeyGenerator"
+        ui:generateLocales="default">
+
+    <ui:with field="nameTokens" type="com.arcbees.website.client.NameTokensConstants"/>
+    <ui:with field="res" type="com.arcbees.website.client.resources.AppResources"/>
+    <ui:with field="page" type="com.arcbees.website.client.resources.PageBeesResources"/>
+    <ui:with field="fonts" type="com.arcbees.website.client.resources.FontResources"/>
+    <ui:with field="animations" type="com.arcbees.website.client.resources.AnimationsResources"/>
+
+    <g:HTMLPanel styleName="{page.style.bees}">
+
+        <seo:SeoWidget>
+            <seo:Title>
+                <ui:msg description="SEO - Bees - title">Team - Arcbees</ui:msg>
+            </seo:Title>
+            <seo:Description>
+                <ui:msg description="SEO - Bees - description">
+                    We are a hive, a team, with shared values and purpose.
+                </ui:msg>
+            </seo:Description>
+        </seo:SeoWidget>
+
+        <h1 class="{res.style.breadcrumb} {res.style.withLogo}">
+            <ui:msg description="Our bees">Our bees</ui:msg>
+        </h1>
+
+        <section class="{res.style.stripe} {res.style.header} {page.style.header} {res.style.light} {page.style.intro}">
+            <div>
+                <i class="{fonts.icons.iconArcbees} {page.style.icon1} {animations.style.animation} {animations.style.bounceIn}"></i>
+                <i class="{fonts.icons.iconArcbees} {page.style.icon2} {animations.style.animation} {animations.style.bounceIn}"></i>
+                <i class="{fonts.icons.iconArcbees} {page.style.icon3} {animations.style.animation} {animations.style.bounceIn}"></i>
+                <i class="{fonts.icons.iconArcbees} {page.style.icon4} {animations.style.animation} {animations.style.bounceIn}"></i>
+                <i class="{fonts.icons.iconArcbees} {page.style.icon5} {animations.style.animation} {animations.style.bounceIn}"></i>
+                <i class="{fonts.icons.iconArcbees} {page.style.icon6} {animations.style.animation} {animations.style.bounceIn}"></i>
+            </div>
+        </section>
+
+        <section class="{res.style.stripe} {res.style.dark} {res.style.triangleBottom} {res.style.nextColored}">
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper} {res.style.focusBlock}">
+                <div class="{res.grid.col} {res.grid.col_8} {res.grid.col_push_1_6} {res.grid.col_m_full} {res.grid.col_m_push_0}">
+
+                    <h2 class="{res.style.stripeTitle}">
+                        <ui:msg description="Our Culture">Our Culture</ui:msg>
+                    </h2>
+                    <p>
+                        <ui:msg description="Our Culture - Paragraph -">Every Bee is entitled to their own opinion and
+                            to challenge the Queenbee, but we are a hive, a team, with shared values and purpose.
+                        </ui:msg>
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+        <section
+                class="{res.style.stripe} {res.style.colored} {res.style.triangleBottom} {res.style.nextLight}  {res.style.centered}">
+            <div class="{page.style.valuesSlider} {res.grid.row} {res.style.wrapper}">
+                <slider:Slider>
+                    <slider:content>
+                        <g:HTMLPanel>
+                            <div class="{res.grid.col} {res.grid.col_6} {res.grid.col_push_1_4} {res.grid.col_t_8} {res.grid.col_t_push_1_6} {res.grid.col_m_full} {res.grid.col_m_push_0}">
+                                <h2>
+                                    <ui:msg description="Bee dedicated - title">Bee Dedicated</ui:msg>
+                                </h2>
+                                <p>
+                                    <ui:msg description="Bee dedicated - text">When we agree to take on a
+                                        client’s project, it’s not just their project anymore. It’s ours too, and
+                                        there’s nothing we won't do to make it a success.
+                                    </ui:msg>
+                                </p>
+                            </div>
+                            <div class="{res.grid.col} {res.grid.col_6} {res.grid.col_push_1_4} {res.grid.col_m_full} {res.grid.col_m_push_0}">
+                                <h2>
+                                    <ui:msg description="Bee United - title">Bee United</ui:msg>
+                                </h2>
+                                <p>
+                                    <ui:msg description="Bee United - text">There is no place for loners in the
+                                        Hive. We share our discoveries, knowledge and mistakes to make sure we don't
+                                        repeat errors, and to help us all grow as a team.
+                                    </ui:msg>
+                                </p>
+                            </div>
+                            <div class="{res.grid.col} {res.grid.col_6} {res.grid.col_push_1_4} {res.grid.col_m_full} {res.grid.col_m_push_0}">
+                                <h2>
+                                    <ui:msg description="Bee Passionate - title">Bee Passionate</ui:msg>
+                                </h2>
+                                <p>
+                                    <ui:msg description="Bee Passionate - text">We love what we do and we can
+                                        never have enough. We are mission-driven and we feed off the passion and energy
+                                        of our fellow Bees.
+                                    </ui:msg>
+                                </p>
+                            </div>
+                            <div class="{res.grid.col} {res.grid.col_6} {res.grid.col_push_1_4} {res.grid.col_m_full} {res.grid.col_m_push_0}">
+                                <h2>
+                                    <ui:msg description="Bee Ambitious - title">Bee Ambitious</ui:msg>
+                                </h2>
+                                <p>
+                                    <ui:msg description="Bee Ambitious - text">Bees are encouraged to have their
+                                        own goals and projects. The Hive and other Bees are more than happy to help and
+                                        to give them time, space and feedback.
+                                    </ui:msg>
+                                </p>
+                            </div>
+                            <div class="{res.grid.col} {res.grid.col_6} {res.grid.col_push_1_4} {res.grid.col_m_full} {res.grid.col_m_push_0}">
+                                <h2>
+                                    <ui:msg description="Bee Inspired - title">Bee Inspired</ui:msg>
+                                </h2>
+                                <p>
+                                    <ui:msg description="Bee Inspired - text">Each client project is unique, and
+                                        we love it. We don't recreate the same things over and over again. We dig deep,
+                                        apply our learning, and propose innovative ideas and solutions.
+                                    </ui:msg>
+                                </p>
+                            </div>
+                        </g:HTMLPanel>
+                    </slider:content>
+                </slider:Slider>
+            </div>
+        </section>
+
+        <section ui:field="bees" class="{res.style.stripe} {res.style.light} {res.style.centered}">
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                <div class="{res.grid.col} {res.grid.col_full}">
+
+                    <h2>
+                        <ui:msg description="Our Bees">Our Bees</ui:msg>
+                    </h2>
+
+                    <div class="{page.style.hive}">
+                        <div class="{page.style.bee} {page.style.bee1}">
+                            <div class="{page.style.beeHolder1}">
+                                <div class="{page.style.beeHolder2}">
+                                    <g:Image resource="{page.beeChristian1}"></g:Image>
+                                    <a href="#{nameTokens.BEE_CHRISTIAN}">
+                                        <h3>Christian
+                                            <span>Goudreau</span>
+                                        </h3>
+                                        <p>
+                                            <ui:msg description="Christian's title">BEE-EO and co-founder</ui:msg>
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="{page.style.bee} {page.style.bee1}">
+                            <div class="{page.style.beeHolder1}">
+                                <div class="{page.style.beeHolder2}">
+                                    <g:Image resource="{page.beeFrancois1}"></g:Image>
+                                    <a href="#{nameTokens.BEE_FRANCOIS}">
+                                        <h3>François <span>Dion</span></h3>
+                                        <p>
+                                            <ui:msg description="Francois's title">Strategic advisor, associate and
+                                                Board chairman
+                                            </ui:msg>
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="{page.style.bee} {page.style.bee2}">
+                            <div class="{page.style.beeHolder1}">
+                                <div class="{page.style.beeHolder2}">
+                                    <g:Image resource="{page.beePhilippeb1}"></g:Image>
+                                    <a href="#{nameTokens.BEE_PHILIPPEB}">
+                                        <h3>Philippe <span>Beaudoin</span></h3>
+                                        <p><ui:msg description="Philippe Beaudoin's title">Advisor and co-founder</ui:msg></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="{page.style.bee} {page.style.bee3}">
+                            <div class="{page.style.beeHolder1}">
+                                <div class="{page.style.beeHolder2}">
+                                    <g:Image resource="{page.beePhilippeA1}"></g:Image>
+                                    <a href="#{nameTokens.BEE_PHILIPPEA}">
+                                        <h3>Philippe <span>Araujo</span></h3>
+                                        <p><ui:msg description="Philippe Araujo's title">Business Knight</ui:msg></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="{page.style.bee} {page.style.bee1}">
+                            <div class="{page.style.beeHolder1}">
+                                <div class="{page.style.beeHolder2}">
+                                    <g:Image resource="{page.beeGenevieve1}"></g:Image>
+                                    <a href="#{nameTokens.BEE_GENEVIEVE}">
+                                        <h3>Geneviève <span>Doyle</span></h3>
+                                        <p><ui:msg description="Geneviève's title">Attorney</ui:msg></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="{page.style.bee} {page.style.bee2}">
+                            <div class="{page.style.beeHolder1}">
+                                <div class="{page.style.beeHolder2}">
+                                    <g:Image resource="{page.beeJulien1}"></g:Image>
+                                    <a href="#{nameTokens.BEE_JULIEN}">
+                                        <h3>Julien <span>Dramaix</span></h3>
+                                        <p><ui:msg description="Julien's title">Lead Software Engineer, Bee-r cool-er</ui:msg></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="{page.style.bee} {page.style.bee3}">
+                            <div class="{page.style.beeHolder1}">
+                                <div class="{page.style.beeHolder2}">
+                                    <g:Image resource="{page.beeManon1}"></g:Image>
+                                    <a href="#{nameTokens.BEE_MANON}">
+                                        <h3>Manon <span>Gruaz</span></h3>
+                                        <p><ui:msg description="Manon's title">Lead Designer, Branding goddess and Loving Bee</ui:msg></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="{page.style.bee} {page.style.bee1}">
+                            <div class="{page.style.beeHolder1}">
+                                <div class="{page.style.beeHolder2}">
+                                    <g:Image resource="{page.beeJason1}"></g:Image>
+                                    <a href="#{nameTokens.BEE_JASON}">
+                                        <h3>Jason <span>Lemay</span></h3>
+                                        <p><ui:msg description="Jason's title">Dual wielding Front-end Specialist</ui:msg></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="{page.style.bee} {page.style.bee2}">
+                            <div class="{page.style.beeHolder1}">
+                                <div class="{page.style.beeHolder2}">
+                                    <g:Image resource="{page.beeMaxime1}"></g:Image>
+                                    <a href="#{nameTokens.BEE_MAXIME}">
+                                        <h3>Maxime <span>Mériouma-</span><span>Caron</span></h3>
+                                        <p><ui:msg description="Maxime's title">Night Shadow Developer</ui:msg></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="{page.style.bee} {page.style.bee3}">
+                            <div class="{page.style.beeHolder1}">
+                                <div class="{page.style.beeHolder2}">
+                                    <g:Image resource="{page.beeChristopher1}"></g:Image>
+                                    <a href="#{nameTokens.BEE_CHRISTOPHER}">
+                                        <h3>Christopher <span>Viel</span></h3>
+                                        <p><ui:msg description="Christopher title">Crazy Code Mastermind</ui:msg></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="{page.style.bee} {page.style.bee1}">
+                            <div class="{page.style.beeHolder1}">
+                                <div class="{page.style.beeHolder2}">
+                                    <g:Image resource="{page.beeSimonPierre1}"></g:Image>
+                                    <a href="#{nameTokens.BEE_SIMONPIERRE}">
+                                        <h3>Simon-Pierre <span>Gingras</span></h3>
+                                        <p>
+                                            <ui:msg description="Simon-Pierre's title">Developer of things, Chief Bacon Evangelist</ui:msg>
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="{page.style.bee} {page.style.bee2}">
+                            <div class="{page.style.beeHolder1}">
+                                <div class="{page.style.beeHolder2}">
+                                    <g:Image resource="{page.beeJoel1}"></g:Image>
+                                    <a href="#{nameTokens.BEE_JOEL}">
+                                        <h3>Joel <span>Trottier-Hébert</span></h3>
+                                        <p><ui:msg description="Joel's title">Bugs writer</ui:msg></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="{page.style.bee} {page.style.bee3}">
+                            <div class="{page.style.beeHolder1}">
+                                <div class="{page.style.beeHolder2}">
+                                    <g:Image resource="{page.beeLarry1}"></g:Image>
+                                    <a href="#{nameTokens.BEE_LARRY}">
+                                        <h3>Larry <span>Matte</span></h3>
+                                        <p><ui:msg description="Larry's title">Undercover Front-end Agent</ui:msg></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="{page.style.bee} {page.style.bee1}">
+                            <div class="{page.style.beeHolder1}">
+                                <div class="{page.style.beeHolder2}">
+                                    <g:Image resource="{page.beeJeanChristophe1}"></g:Image>
+                                    <a href="#{nameTokens.BEE_JEANCHRISTOPHE}">
+                                        <h3>Jean-<span>Christophe</span> <span>Lariviere</span></h3>
+                                        <p><ui:msg description="Jean-Christophe's title">Coder in the North</ui:msg></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="{res.style.stripe} {res.style.light} {res.style.centered}">
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                <div class="{res.grid.col} {res.grid.col_full}">
+                    <h2>
+                        <ui:msg description="Wanna bee?">Wanna bee?</ui:msg>
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <g:HTMLPanel tag="section" ui:field="quizSection"
+                     styleName="{res.style.stripe} {res.style.dark} {res.style.centered}">
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                <div class="{res.grid.col} {res.grid.col_full}">
+
+                    <h2 ui:field="quizTitle">
+                        <ui:msg description="Bee-attitude">Bee-attitude</ui:msg>
+                    </h2>
+
+                    <p>
+                        <g:Button ui:field="initQuizButton" styleName="{res.style.btn}">
+                            <ui:msg description="Go, I'm ready to beeez">Go, I'm ready to beeez</ui:msg>
+                        </g:Button>
+                    </p>
+
+                </div>
+            </div>
+        </g:HTMLPanel>
+
+        <section class="{page.style.offers} {res.style.stripe} {res.style.light} {res.style.centered}">
+            <h2>
+                <ui:msg description="Spontaneous applications">Spontaneous applications</ui:msg>
+            </h2>
+            <div class="{res.style.stripe}">
+                <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                    <div class="{res.grid.col} {res.grid.col_full}">
+                        <h3>
+                            <ui:msg description="Job applications - Software engineer">Software engineer</ui:msg>
+                        </h3>
+                        <a href="mailto:candidates@arcbees.com" class="{res.style.btn}">
+                            <ui:msg description="Job applications - Software engineer - Btn">How can you be the best
+                                programmer you can be
+                            </ui:msg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="{res.style.stripe}">
+                <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                    <div class="{res.grid.col} {res.grid.col_full}">
+                        <h3>
+                            <ui:msg description="Job applications - Web developer">Web developer</ui:msg>
+                        </h3>
+                        <a href="mailto:candidates@arcbees.com" class="{res.style.btn}">
+                            <ui:msg description="Job applications - Web developer - Btn">Awesome CSS Master</ui:msg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="{res.style.stripe}">
+                <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                    <div class="{res.grid.col} {res.grid.col_full}">
+                        <h3>
+                            <ui:msg description="Job applications - Graphic designer">Graphic designer</ui:msg>
+                        </h3>
+                        <a href="mailto:candidates@arcbees.com" class="{res.style.btn}">
+                            <ui:msg description="Job applications - Graphic designer - Btn">You want to create beauty and passion
+                            </ui:msg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="{page.style.popup}" ui:field="popup">
+            <div class="{res.style.wrapper}">
+                <g:HTMLPanel tag="section" ui:field="bee" styleName="{page.style.popupContent}"/>
+                <a href="#" ui:field="popupClose" class="{page.style.popupClose}">
+                    <i class="{fonts.icons.iconClose}"></i>
+                </a>
+            </div>
+        </div>
+
+    </g:HTMLPanel>
+</ui:UiBinder>

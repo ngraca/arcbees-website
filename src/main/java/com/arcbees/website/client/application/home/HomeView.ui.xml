@@ -1,0 +1,405 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:seo="urn:import:com.arcbees.seo.widget"
+             ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+             ui:generateKeys="com.google.gwt.i18n.server.keygen.MD5KeyGenerator"
+             ui:generateLocales="default">
+
+    <ui:with field="nameTokens" type="com.arcbees.website.client.NameTokensConstants"/>
+    <ui:with field="res" type="com.arcbees.website.client.resources.AppResources"/>
+    <ui:with field="page" type="com.arcbees.website.client.resources.PageHomeResources"/>
+    <ui:with field="fonts" type="com.arcbees.website.client.resources.FontResources"/>
+    <ui:with field="animations" type="com.arcbees.website.client.resources.AnimationsResources"/>
+
+    <g:HTMLPanel styleName="{page.style.home}">
+
+        <seo:SeoWidget>
+            <seo:Title>
+                <ui:msg description="SEO - Home - title">Arcbees - Architects of simplicity</ui:msg>
+            </seo:Title>
+            <seo:Description>
+                <ui:msg description="SEO - Home - description">
+                    Web development and tools creation that help developers optimize process, habits and thinking. GWT,
+                    GWTP, Jukito, GAE Studio, GQuery. Quebec, Canada.
+                </ui:msg>
+            </seo:Description>
+        </seo:SeoWidget>
+
+        <a href="/">
+            <h1 class="{res.style.breadcrumb} {res.style.withLogo}">
+                Arcbees
+            </h1>
+        </a>
+
+        <section class="{res.style.stripe} {res.style.header} {page.style.header} {res.style.colored}">
+            <div class="{page.style.txtBanner}">
+                <p>
+                    <strong>
+                        <ui:msg description="Home - animation - we">we</ui:msg>
+                        <span class="{page.style.txtAre} {animations.style.animation}">
+                            <ui:msg description="Home - animation - are">are</ui:msg>
+                        </span>
+                        <span class="{page.style.txtCreate} {animations.style.animation}">
+                            <ui:msg description="Home - animation - build">create</ui:msg>
+                        </span>
+                    </strong>
+                    <span class="{page.style.txtArch} {animations.style.animation}">
+                        arc
+                        <span class="{page.style.txtArchitects} {animations.style.animation}">
+                            <ui:msg description="Home - animation - hitect">hitect</ui:msg>
+                        </span>
+                        <span class="{page.style.txtBees} {animations.style.animation}">
+                            <ui:msg description="Home - animation - bees">bees</ui:msg>
+                        </span>
+                    </span>
+                    <span class="{page.style.txtProducts} {animations.style.animation}">
+                        <ui:msg description="Home - animation - product">products</ui:msg>
+                    </span>
+                </p>
+            </div>
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper} {page.style.btns} {res.style.centered}">
+                <div class="{res.grid.col} {res.grid.col_full}">
+                    <a href="#{nameTokens.EXPERTISE}" title="expertise" class="{res.style.btn}">
+                        <ui:attribute ui:name='title' ui:description='expertise'/>
+                        Expertise
+                    </a>
+                    <a href="#{nameTokens.PRODUCTS}" title="products" class="{res.style.btn}">
+                        <ui:attribute ui:name='title' ui:description='products'/>
+                        <ui:msg description="BTN - Products">Products</ui:msg>
+                    </a>
+                    <a href="#{nameTokens.SERVICES}" title="services" class="{res.style.btn}">
+                        <ui:attribute ui:name='title' ui:description='services'/>
+                        Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="{res.style.stripe} {res.style.dark} {res.style.triangleBottom} {res.style.nextLight}">
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper} {res.style.focusBlock}">
+                <div class="{res.grid.col} {res.grid.col_8} {res.grid.col_push_1_6} {res.grid.col_m_full} {res.grid.col_m_push_0}">
+                    <h2 class="{res.style.stripeTitle}">
+                        <ui:msg description="Home - Our quest - title">Our Quest</ui:msg>
+                    </h2>
+                    <p>
+                        <ui:msg description="Home - Our quest - text">To create products that help developers optimize
+                            process, habits and thinking; to deliver value through simplicity; and transform the way
+                            developers work around the world.
+                        </ui:msg>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="{page.style.beeTheBest} {res.style.stripe} {res.style.light} {res.style.triangleBottom} {res.style.nextColored}">
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper} {res.style.centered}">
+                <div class="{res.grid.col} {res.grid.col_1_2} {res.grid.col_push_1_4} {res.grid.col_m_full} {res.grid.col_m_push_0}">
+                    <h2 class="{res.style.stripeTitle}">
+                        <ui:msg description="Home - Bee the Best - title">Bee The Best</ui:msg>
+                    </h2>
+                    <p>
+                        <ui:msg description="Home - Bee the Best - text">Our products help you excel as a developer by
+                            simplifying your code, enhancing your user
+                            experience and optimizing your time.
+                        </ui:msg>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="{res.style.stripe} {res.style.colored} {page.style.successStoryHolder}">
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper} {res.style.centered} {page.style.successStory}">
+                <div class="{res.grid.col} {res.grid.col_1_2} {res.grid.col_push_1_4} {res.grid.col_m_full} {res.grid.col_m_push_0}">
+                    <i class="{fonts.icons.iconGwtp}"></i>
+                    <h2 class="{res.style.stripeTitle}">
+                        <ui:msg description="Home - A success story - title">A Success
+                            <span>Story</span>
+                        </ui:msg>
+                    </h2>
+                    <p>
+                        <ui:msg description="Home - A success story - text">It all began with two passionate
+                            technologists, Christian Goudreau and Philippe Beaudoin, a framework with endless
+                            possibilities named GWTP and… Google.
+                        </ui:msg>
+                    </p>
+                    <a class="{res.style.btn}" title="learn more" ui:field="successStoryBtn" href="javascript:;">
+                        <ui:attribute ui:name='title' ui:description='learn more'/>
+                        <ui:msg description="Btn - learn more">Learn more</ui:msg>
+                    </a>
+                </div>
+            </div>
+            <div class="{res.style.wrapper} {res.style.centered} {page.style.successStoryMore}"
+                    ui:field="successStoryMore">
+                <div class="{res.grid.row} {res.style.clearfix}">
+                    <div class="{res.grid.col} {res.grid.col_full} {res.style.centered} {page.style.ssicons}">
+                        <g:Image styleName="{res.style.mobileHidden}" resource="{page.ssicons}"/>
+                        <g:Image styleName="{res.style.mobileVisible}" resource="{page.ssiconsMobile}"/>
+                        <div class="{page.style.ssiconsHexa}">
+                            <svg version="1.1" id="Layer_1" x="0px" y="0px"
+                             width="495.746px" height="163.688px" viewBox="0 0 495.746 163.688" enable-background="new 0 0 495.746 163.688"
+                             xml:space="preserve">
+                            <path class="{page.style.path1}" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+                                M177.715,91.083l4.954-8.643c0.212-0.37,0.212-0.825,0-1.194L138.445,4.103c-0.213-0.373-0.611-0.603-1.041-0.603H48.922
+                                c-0.43,0-0.828,0.23-1.042,0.603L3.659,81.247c-0.211,0.369-0.211,0.824,0,1.194l44.222,77.144
+                                c0.214,0.373,0.612,0.604,1.042,0.604h88.482c0.43,0,0.828-0.23,1.041-0.604l26.217-45.798"/>
+                            <path class="{page.style.path2}" fill="none" stroke="#fff" stroke-width="9" stroke-miterlimit="10" d="M337.378,81.247L293.154,4.103
+                                C292.94,3.73,292.543,3.5,292.114,3.5h-88.483c-0.43,0-0.828,0.23-1.041,0.603l-44.221,77.144c-0.212,0.369-0.212,0.824,0,1.194
+                                l44.221,77.144c0.213,0.373,0.611,0.604,1.041,0.604h88.483c0.429,0,0.827-0.23,1.041-0.604l44.224-77.144
+                                C337.59,82.071,337.59,81.616,337.378,81.247z"/>
+                            <path class="{page.style.path3}" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+                                M319.669,70.002l-6.591,11.244c-0.212,0.369-0.212,0.824,0,1.194l44.221,77.143c0.214,0.374,0.612,0.604,1.042,0.604h88.481
+                                c0.431,0,0.827-0.23,1.041-0.604l44.226-77.143c0.21-0.37,0.21-0.825,0-1.194L447.863,4.103c-0.214-0.374-0.61-0.603-1.041-0.603
+                                h-88.481c-0.43,0-0.828,0.23-1.042,0.603l-25.978,45.773"/>
+                        </svg>
+                        </div>
+                    </div>
+                    <div class="{res.grid.col} {res.grid.col_1_3} {res.grid.col_m_full}">
+                        <h3>
+                            <ui:msg description="Home - The Genesis Of GWTP - title">The Genesis
+                                <span>Of GWTP</span>
+                            </ui:msg>
+                        </h3>
+                        <p>
+                            <ui:msg description="Home - The Genesis Of GWTP - text">The two co-founders collaborated on
+                                ways of applying best practices in software engineer to GWT, which resulted in the
+                                invention of GWT-Platform, a powerful and flexible open source tool for rapidly creating
+                                robust web applications.
+                            </ui:msg>
+                        </p>
+                    </div>
+                    <div class="{res.grid.col} {res.grid.col_1_3} {res.grid.col_m_full}">
+                        <h3>
+                            <ui:msg description="Home - Immediate Growth - title">Immediate
+                                <span>Growth</span>
+                            </ui:msg>
+                        </h3>
+                        <p>
+                            <ui:msg description="Home - Immediate Growth - text">The time was ripe for GWT-Platform. It
+                                grew so quickly that the co-founders had to officially establish Arcbees as a company in
+                                July 2010, to give community and commercial developers the support they deserved, and to
+                                evolve the platform.
+                            </ui:msg>
+                        </p>
+                    </div>
+                    <div class="{res.grid.col} {res.grid.col_1_3} {res.grid.col_m_full}">
+                        <h3>
+                            <ui:msg description="Home - Google-Recognized - title">Google-
+                                <span>Recognized</span>
+                            </ui:msg>
+                        </h3>
+                        <p>
+                            <ui:msg description="Home - Google-Recognized - text">Within less than a year, Google
+                                invited the two men to speak at Google I/O. In 2012, Christian was appointed to the GWT
+                                Steering Committee, the body dedicated to advancing the ongoing evolution of this
+                                framework.
+                            </ui:msg>
+                        </p>
+                    </div>
+                </div>
+                <div class="{res.grid.row} {res.style.clearfix}">
+                    <div class="{res.grid.col} {res.grid.col_1_3} {res.grid.col_push_1_3} {res.grid.col_m_full} {res.grid.col_m_push_0}">
+                        <h2>
+                            <ui:msg description="Home - The Bee Way - title">The Bee Way</ui:msg>
+                        </h2>
+                        <p>
+                            <ui:msg description="Home - The Bee Way - text">Our passion is architectural and
+                                programming excellence. Our products, coaching and support activities are all driven by
+                                our desire to make it as easy as possible for you to deliver great code.
+                            </ui:msg>
+                        </p>
+                    </div>
+                    <div class="{res.grid.col} {res.grid.col_full} {res.style.centered}">
+                        <a class="{res.style.btn} {res.style.collapsible} {res.style.closer}" href="javascript:;"
+                                ui:field="successStoryCloser"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="{res.style.stripe} {res.style.light} {res.style.centered}">
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                <div class="{res.grid.col} {res.grid.col_1_2} {res.grid.col_push_1_4} {res.grid.col_m_full} {res.grid.col_m_push_0}">
+                    <h2 class="{res.style.lonely}">
+                        <ui:msg description="Home - Why The Name Arcbees? - title">Why The Name
+                            <span>Arcbees?</span>
+                        </ui:msg>
+                    </h2>
+                    <p>
+                        <ui:msg description="Home - Why The Name Arcbees? - text">“Arc” stands for “Architects”. Bees
+                            are bees. We think of ourselves as Architects Bees. Here's why.
+                        </ui:msg>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="{res.style.centered}">
+            <div class="{res.style.stripe} {res.style.dark} {page.style.architect}">
+                <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}"
+                        ui:field="architect">
+                    <div class="{res.grid.col} {res.grid.col_1_2} {res.grid.col_push_1_4} {res.grid.col_m_full} {res.grid.col_m_push_0}">
+                        <h3 class="{res.style.stripeTitle}">
+                            <ui:msg description="Home - Architects">Architects</ui:msg>
+                        </h3>
+                        <a href="javascript:;" class="{res.style.btn}" ui:field="architectBtn">
+                            <ui:msg description="Btn - learn more">Learn more</ui:msg>
+                        </a>
+                        <div ui:field="architectMore">
+                            <p>
+                                <ui:msg description="Home - Architects - text">Architecture matters. Great products
+                                    require a clear and extensible underlying structure. This is especially important
+                                    for products to stand the test of time. We look around, and we see well-architected
+                                    buildings all around us that remain useful for decades if not centuries. That
+                                    inspires us to pursue great design principles right down to their
+                                    foundations. A passion for great architecture drives everything we do.
+                                </ui:msg>
+                            </p>
+                        </div>
+
+                        <i class="{fonts.icons.iconClose} {page.style.iconPlus}"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="{page.style.bees}" ui:field="bees">
+                <div class="{page.style.logoConstruct}">
+                    <svg version="1.1" id="Layer_1" x="0px" y="0px" width="2852.04px" height="900.824px" viewBox="-675.989 -0.125 2852.04 900.824" enable-background="new -675.989 -0.125 2852.04 900.824" xml:space="preserve">
+                    <g>
+                        <path class="{page.style.logo}" fill="#FFFFFF" d="M891.828,416.661l-127.393-221.03l-0.186-0.321c-0.262-0.457-0.748-0.736-1.271-0.736H737.71
+                        c-0.524,0-1.009,0.279-1.271,0.734L608.748,416.661c-0.262,0.455-0.261,1.014,0.001,1.467c0.262,0.454,0.746,0.733,1.271,0.733
+                        h35.265c0.525,0,1.013-0.283,1.272-0.739l29.123-50.941l29.329,51.147c0.262,0.455,0.747,0.736,1.272,0.736h88.011
+                        c0.524,0,1.012-0.281,1.272-0.736l29.425-51.311l29.231,51.104c0.261,0.456,0.746,0.739,1.273,0.739h35.062
+                        c0.523,0,1.008-0.279,1.271-0.733C892.09,417.675,892.091,417.116,891.828,416.661 M724.406,386.072l-16.46-28.706h84.68
+                        l-16.458,28.706H724.406z M707.946,324.421l16.46-28.706h51.759l16.461,28.706H707.946z M765.332,262.723h-29.936l14.964-26.175
+                        L765.332,262.723z"/>
+                    </g>
+                        <line class="{page.style.horizontal}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="2176.051" y1="357.366" x2="-675.989" y2="357.366"/>
+                        <line class="{page.style.horizontal}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="2176.051" y1="367.158" x2="-675.989" y2="367.158"/>
+                        <line class="{page.style.horizontal}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="2176.051" y1="418.866" x2="-675.989" y2="418.866"/>
+                        <line class="{page.style.horizontal}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="2176.051" y1="324.428" x2="-675.989" y2="324.428"/>
+                        <line class="{page.style.horizontal}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="2176.051" y1="262.723" x2="-675.989" y2="262.723"/>
+                        <line class="{page.style.horizontal}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="2176.051" y1="236.548" x2="-675.989" y2="236.548"/>
+                        <line class="{page.style.horizontal}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="2176.051" y1="194.574" x2="-675.989" y2="194.574"/>
+                        <line class="{page.style.horizontal}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="2176.051" y1="295.715" x2="-675.989" y2="295.715"/>
+                        <line class="{page.style.horizontal}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="2176.051" y1="386.072" x2="-675.989" y2="386.072"/>
+
+                        <line class="{page.style.vertical}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="824.656" y1="0" x2="824.656" y2="900.475"/>
+                        <line class="{page.style.vertical}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="854.995" y1="0" x2="854.995" y2="900.475"/>
+                        <line class="{page.style.vertical}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="645.156" y1="0" x2="645.156" y2="900.475"/>
+                        <line class="{page.style.vertical}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="675.281" y1="0" x2="675.281" y2="900.475"/>
+                        <line class="{page.style.vertical}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="750.031" y1="0" x2="750.031" y2="900.475"/>
+                        <line class="{page.style.vertical}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="776.156" y1="0" x2="776.156" y2="900.475"/>
+                        <line class="{page.style.vertical}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="792.156" y1="0" x2="792.156" y2="900.475"/>
+                        <line class="{page.style.vertical}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="723.781" y1="0" x2="723.781" y2="900.475"/>
+                        <line class="{page.style.vertical}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="707.531" y1="0" x2="707.531" y2="900.475"/>
+                        <line class="{page.style.vertical}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="735.156" y1="0" x2="735.156" y2="900.475"/>
+                        <line class="{page.style.vertical}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="764.906" y1="0" x2="764.906" y2="900.699"/>
+
+                        <line class="{page.style.diagonal}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="463.767" y1="0" x2="982.666" y2="900.475"/>
+                        <line class="{page.style.diagonal}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="502.711" y1="0" x2="1019.097" y2="900.475"/>
+                        <line class="{page.style.diagonal}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="607.658" y1="0" x2="1120.221" y2="900.475"/>
+                        <line class="{page.style.diagonal}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="651.351" y1="0" x2="1170.423" y2="900.475"/>
+                        <line class="{page.style.diagonal}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="613.838" y1="0" x2="1132.089" y2="900.475"/>
+                        <line class="{page.style.diagonal}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="329.395" y1="900.475" x2="848.922" y2="-0.125"/>
+                        <line class="{page.style.diagonal}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="371.031" y1="900.475" x2="884.982" y2="-0.125"/>
+                        <line class="{page.style.diagonal}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="892.449" y1="-0.125" x2="379.75" y2="900.475"/>
+                        <line class="{page.style.diagonal}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="1036.085" y1="-0.125" x2="517.634" y2="900.475"/>
+                        <line class="{page.style.diagonal}" fill="none" stroke="#939393" stroke-width="0.25" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="2,2" x1="480.964" y1="900.475" x2="997.346" y2="-0.125"/>
+
+                        <path class="{page.style.border}" fill="none" stroke="#666" stroke-width="0.25" stroke-miterlimit="10" d="M891.57,416.661L763.992,195.31
+                        c-0.262-0.457-0.748-0.736-1.271-0.736h-25.268c-0.524,0-1.009,0.279-1.271,0.734L608.491,416.661
+                        c-0.262,0.455-0.261,1.014,0.001,1.467c0.262,0.454,0.746,0.733,1.271,0.733h35.265c0.525,0,1.013-0.283,1.272-0.739l29.084-50.964
+                        l29.368,50.972c0.262,0.455,0.747,0.736,1.272,0.736h88.01c0.524,0,1.012-0.281,1.272-0.736l29.425-51.112l29.231,51.104
+                        c0.261,0.456,0.746,0.739,1.273,0.739h35.062c0.523,0,1.008-0.279,1.271-0.733C891.832,417.675,891.833,417.116,891.57,416.661"/>
+
+                        <polygon class="{page.style.border}" fill="none" stroke="#c9b804" stroke-miterlimit="10" points="724.406,386.072 707.946,357.366 792.626,357.366
+                            776.168,386.072"/>
+                        <polygon class="{page.style.border}" fill="none" stroke="#c9b804" stroke-miterlimit="10" points="707.946,324.421 724.406,295.715 776.165,295.715
+                            792.626,324.421"/>
+                        <polygon class="{page.style.border}" fill="none" stroke="#c9b804" stroke-miterlimit="10" points="765.332,262.723 735.396,262.723 750.36,236.548"/>
+                    </svg>
+                </div>
+                <div class="{res.style.stripe}">
+                    <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                        <div class="{res.grid.col} {res.grid.col_full}">
+                            <h3 class="{res.style.stripeTitle}">
+                                <ui:msg description="Home - Bees - title">Bees</ui:msg>
+                            </h3>
+                            <a href="javascript:;" class="{res.style.btn}" ui:field="beesBtn">
+                                <ui:msg description="Home - Bees - btn">You can’t beat bees for efficiency.</ui:msg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="{res.style.stripe}" ui:field="beesMore">
+                    <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                        <div>
+                            <div class="{res.grid.col} {res.grid.col_1_2} {res.grid.col_push_1_4} {res.grid.col_m_full} {res.grid.col_m_push_0} {page.style.beesContent}">
+                                <ui:msg description="Home - Bees - text">
+                                    <p>
+                                        <strong>You can’t beat bees for efficiency.</strong>
+                                    </p>
+                                    <p>Their hexagonal honeycombs are the most
+                                        economical structure for packing a surface. It gives them the most storage for
+                                        the lowest resource cost mathematically possible.
+                                    </p>
+                                    <p>Each type of bee is an expert at its job, but at a signal from the queen the
+                                        whole hive can mobilize and move. Bees work hard. When a team is fully engaged
+                                        in a project, we say they’re “as busy as bees”. But the busyness of bees relies
+                                        on the integrity of the hive.
+                                    </p>
+                                    <p>We want to help developers generate the structure and coordinate their efforts as
+                                        efficiently as bees, so that they can concentrate on what they do best, and
+                                        consistently enjoy the sweet, sweet honey of their own success.
+                                    </p>
+                                </ui:msg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="{res.style.stripe} {res.style.light} {res.style.centered}">
+            <div class="{page.style.equal}"></div>
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper}">
+                <div class="{res.grid.col} {res.grid.col_1_2} {res.grid.col_push_1_4} {res.grid.col_m_full} {res.grid.col_m_push_0}">
+                    <h2>
+                        <ui:msg description="Home - Architects of simplicity - title">Architects
+                            <span>of simplicity</span>
+                        </ui:msg>
+                    </h2>
+                    <p>
+                        <ui:msg description="Home - Architects of simplicity - text">Inspired by the best architects of
+                            all time, we want to help you create optimal code, by helping you keep your code simple.
+                        </ui:msg>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="{res.style.stripe} {res.style.stripeLast} {res.style.light} {res.style.centered}">
+            <div class="{res.grid.row} {res.style.clearfix} {res.style.wrapper} {res.style.btns} {res.style.centered}">
+                <div class="{res.grid.col} {res.grid.col_full}">
+                    <h3>
+                        <ui:msg description="Home - Learn more about - title">Learn more about</ui:msg>
+                    </h3>
+                    <a href="#{nameTokens.EXPERTISE}" title="Expertise" class="{res.style.btn}">
+                        <ui:attribute ui:name='title' ui:description='Expertise'/>
+                        Expertise
+                    </a>
+                    <a href="#{nameTokens.PRODUCTS}" title="Products" class="{res.style.btn}">
+                        <ui:attribute ui:name='title' ui:description='Products'/>
+                        <ui:msg description="- BTN - Products">Products</ui:msg>
+                    </a>
+                    <a href="#{nameTokens.SERVICES}" title="Services" class="{res.style.btn}">
+                        <ui:attribute ui:name='title' ui:description='Services'/>
+                        Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,1235 @@
+@require "colors";
+@require "geometria";
+@require "gsss-mixins";
+
+/* -- Init ----------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@media (max-width: 979px) {
+    html {
+        font-size: 59%;
+    }
+}
+
+@media (max-width: 649px) {
+    html {
+        font-size: 56%;
+    }
+}
+
+body {
+    color: C_TEXT;
+    font-family: "geometria", Arial, sans-serif;
+    font-size: 1.5rem;
+}
+
+/* avoid top margins on first content element */
+
+p:first-child,
+ul:first-child,
+ol:first-child,
+dl:first-child,
+blockquote:first-child,
+pre:first-child,
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+    margin-top: 0;
+}
+
+/* avoid margins on nested elements */
+
+li p,
+li ul,
+li ol {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* -- Wrapper -------------------------------------------- */
+
+.wrapper {
+    margin: 0 auto;
+    width: 980px;
+
+    position: relative;
+    z-index: 99;
+}
+
+@media (max-width: 979px) {
+    .wrapper {
+        width: 650px;
+    }
+}
+
+@media (max-width: 649px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+
+/* -- Headings ------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-family: "geometriaBold";
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 4.8rem;
+
+    margin: 0;
+
+    position: absolute;
+    top: 25px;
+    left: 49px;
+    z-index: 1;
+
+    @mixin transition(all, 0.4s);
+}
+
+h1 span {
+    font-size: 1.3rem;
+    vertical-align: middle;
+
+    display: inline-block;
+    margin-left: 2px;
+
+    @mixin transition(all, 0.4s);
+}
+
+@media (max-width: 649px) {
+    h1 {
+        color: #fff;
+        font-size: 2.4rem;
+
+        position: fixed;
+        top: 1px;
+        left: 6px;
+        z-index: 9000;
+    }
+
+    h1::before {
+        margin-right: 3px;
+    }
+}
+
+h2 {
+    font-size: 4rem;
+    font-family: "geometriaBold", Arial, sans-serif;
+    line-height: 1em;
+
+    margin: 0.2em 0;
+}
+
+h2 span {
+    display: block;
+}
+
+h2.slogan {
+    font-size: 6rem;
+    font-family: "geometriaBold", Arial, sans-serif;
+    line-height: .9em;
+
+    margin-bottom: 4px;
+}
+
+h2.slogan strong {
+    border-bottom: 0.2em solid C_PRIMARY;
+}
+
+h2.lonely {
+    margin: 0;
+}
+
+.colored h2 strong {
+    border-color: C_STRIPE_LIGHT;
+}
+
+h3 {
+    font-size: 2.5rem;
+    font-family: "geometriaBold", Arial, sans-serif;
+
+    margin: 2.5em 0 0.9em;
+}
+
+h3 span {
+    display: block;
+}
+
+h3.stripeTitle {
+    font-size: 4rem;
+    font-family: "geometriaBold";
+    line-height: 1em;
+
+    margin: 0 0 .5em;
+}
+
+h3.stripeTitle.twoLineTitle {
+    min-height: 8rem;
+}
+
+@media (max-width: 979px) {
+    h2 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 649px) {
+    h2 {
+        font-size: 3rem;
+    }
+
+    h2.slogan {
+        font-size: 4rem;
+    }
+
+    h2.slogan strong {
+        border-bottom: 0;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    h3.stripeTitle {
+        font-size: 2rem;
+    }
+
+    h3.stripeTitle.twoLineTitle {
+        min-height: inherit;
+    }
+}
+
+/* -- Elements ------------------------------------------- */
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+p,
+li {
+    line-height: 1.4em;
+    font-size: 1.5rem;
+
+    margin-bottom: 0.8em;
+}
+
+p.accent {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-family: "geometriaBold", Arial, sans-serif;
+
+    margin-top: 2.2em;
+}
+
+p.accent span {
+    display: block;
+}
+
+strong {
+    font-family: "geometriaBold", Arial, sans-serif;
+    font-weight: normal;
+}
+
+em {
+    font-style: italic;
+}
+
+a.anchor {
+    color: #afafaf;
+    font-size: 2.3rem;
+    font-family: "geometria";
+
+    display: inline-block;
+
+    vertical-align: middle;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* -- Components ---------------------------------------- */
+
+.btns {
+    width: 650px;
+    margin: 0 auto;
+}
+
+.btns a {
+    margin: 0 4.75em;
+}
+
+.btn i:before {
+    font-size: 1.2rem;
+
+    margin-right: .5rem;
+
+    vertical-align: baseline;
+}
+
+.btns a:first-of-type {
+    margin-left: 0;
+}
+
+.btns a:last-child {
+    margin-right: 0;
+}
+
+.btn,
+.btn:visited {
+    color: C_TEXT;
+    text-decoration: none;
+
+    display: inline-block;
+    padding: .9rem 2rem;
+    border: 2px solid C_TEXT;
+
+    position: relative;
+
+    @mixin transition(color, .2s);
+}
+
+.btn::after {
+    content: '';
+    background-color: C_TEXT;
+
+    width: 100%;
+    height: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    @mixin transition(height, .2s);
+}
+
+.btn:hover {
+    color: C_TEXT_LIGHT;
+
+    cursor: pointer;
+}
+
+.btn:hover::after {
+    height: 100%;
+}
+
+.btn.collapsible {
+    color: C_TEXT;
+    background-color: C_TEXT;
+}
+
+.btn.collapsible::before,
+.btn.collapsible::after {
+    content: "\e631";
+    font-size: 2rem;
+    font-family: "icomoonregular";
+    color: C_TEXT_LIGHT;
+    line-height: 1;
+
+    height: 17px;
+    width: auto;
+    margin-left: -9px;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 500;
+
+    -webkit-transition: top 0.2s, bottom 0.2s, height 0;
+    -moz-transition: top 0.2s, bottom 0.2s, height 0;
+    -ms-transition: top 0.2s, bottom 0.2s, height 0;
+    -o-transition: top 0.2s, bottom 0.2s, height 0;
+    transition: top 0.2s, bottom 0.2s, height 0;
+}
+
+@media (max-width: 649px) {
+    .btns {
+        width: auto;
+    }
+
+    .btns a {
+        margin: 0em 0 1rem 0;
+    }
+
+    .btn {
+        padding: .9rem 1rem;
+    }
+
+    .btn.collapsible::before,
+    .btn.collapsible::after {
+        font-size: 1.5rem;
+
+        margin-left: -6px;
+    }
+}
+
+.btn.collapsible::before {
+    top: auto;
+    bottom: 0;
+
+    @mixin rotate_180_cw();
+}
+
+.btn.collapsible:hover::before {
+    height: auto;
+
+    bottom: -2px;
+}
+
+.btn.collapsible:hover::after {
+    height: auto;
+
+    top: -2px;
+}
+
+.btn.collapsible.closer,
+.dark .btn.collapsible.closer {
+    background-color: transparent;
+
+    height: 43px;
+    border: 0;
+}
+
+.btn.collapsible.closer::before,
+.btn.collapsible.closer::after {
+    background-color: transparent;
+    color: C_TEXT;
+}
+
+/* -> Btn light -- */
+
+.dark .btn,
+.dark .btn:visited {
+    color: C_TEXT_LIGHT;
+    background-color: transparent;
+    border: 2px solid C_TEXT_LIGHT;
+}
+
+.dark .btn::after {
+    background-color: C_TEXT_LIGHT;
+}
+
+.dark .btn:hover {
+    color: C_TEXT;
+    background-color: transparent;
+}
+
+.dark button.btn:hover {
+    background-color: C_TEXT_LIGHT;
+}
+
+.dark .btn.collapsible {
+    color: C_TEXT_LIGHT;
+    background-color: C_TEXT_LIGHT;
+}
+
+.dark .btn.collapsible::before,
+.dark .btn.collapsible::after {
+    color: C_TEXT;
+}
+
+.dark .btn.collapsible.closer::before,
+.dark .btn.collapsible.closer::after {
+    background-color: transparent;
+    color: C_TEXT_LIGHT;
+}
+
+/* -- Classes ------------------------------------------- */
+
+.centered {
+    text-align: center;
+}
+
+.hidden {
+    overflow: hidden;
+
+    height: 1px;
+    width: 1px;
+
+    position: absolute !important;
+
+    clip: rect(1px 1px 1px 1px);
+    /* @alternate */ clip: rect(1px, 1px, 1px, 1px);
+}
+
+.mobileVisible {
+    display: none;
+}
+
+@media (max-width: 649px) {
+    .mobileHidden {
+        display: none;
+    }
+
+    .mobileVisible {
+        display: block;
+    }
+}
+
+.visuallyhidden {
+    overflow: hidden;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    border: 0;
+
+    position: absolute;
+
+    clip: rect(0 0 0 0);
+    /* @alternate */ clip: rect(1px, 1px, 1px, 1px);
+}
+
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/* -- Style --------------------------------------------- */
+
+/* -> Main nav -- */
+
+.sidebar {
+    background-color: #1c1c1c;
+
+    height: 100%;
+    width: 255px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@media(min-width: 650px) {
+    .sidebar.active ~ .content {
+        width: calc(100% - 255px);
+    }
+
+    .sidebar.active ~ .content .withLogo {
+        left: -200px;
+        @mixin opacity(0);
+    }
+
+    .sidebar.active ~ .menu {
+        color: #fff;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 979px) {
+    .sidebar:hover:not(.clicked) ~ .content,
+    .menuToggle:hover:not(.clicked) ~ .content {
+        width: calc(100% - 255px);
+    }
+
+    .sidebar:hover:not(.clicked) ~ .content .withLogo,
+    .menuToggle:hover:not(.clicked) ~ .content .withLogo {
+        left: -156px;
+    }
+
+    .sidebar:hover:not(.clicked) ~ .content .withLogo,
+    .menuToggle:hover:not(.clicked) ~ .content .withLogo {
+    @mixin opacity(0);
+    }
+
+    .sidebar:hover:not(.clicked) ~ .menu,
+    .menuToggle:hover:not(.clicked) ~ .menu {
+        color: #fff;
+    }
+
+    .sidebar:hover:not(.clicked) ~ .menuToggle,
+    .sidebar.active:not(.clicked) ~ .menuToggle {
+        left: -40px;
+    }
+}
+
+@media (min-width: 980px) {
+    .sidebar:hover ~ .content,
+    .menuToggle:hover ~ .content {
+        width: calc(100% - 255px);
+    }
+
+    .sidebar:hover ~ .content .withLogo,
+    .menuToggle:hover ~ .content .withLogo {
+        left: -200px;
+        @mixin opacity(0);
+    }
+
+    .sidebar:hover ~ .menu,
+    .menuToggle:hover ~ .menu {
+        color: #fff;
+    }
+
+    .sidebar:hover ~ .menuToggle,
+    .sidebar.active ~ .menuToggle {
+        left: -40px;
+    }
+}
+
+.sidebar a {
+    color: #6f6f6f;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    font-family: "geometriaBold", Arial, sans-serif;
+}
+
+.menu ul {
+    padding: 0;
+
+    list-style-type: none;
+ }
+
+.menu li {
+    line-height: 1em;
+
+    margin-bottom: 0;
+}
+
+.menu li a {
+    display: block;
+    padding: 7px 10px 9px 20px;
+    margin-left: 50px;
+
+    @mixin transition(color, .2s);
+}
+
+.menu li a i:before {
+    font-size: 1rem;
+
+    vertical-align: top;
+}
+
+.menu ul ul {
+    margin-bottom: 4px;
+}
+
+.menu ul ul a {
+    font-family: "geometria", Arial, sans-serif;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.menu ul ul a::before {
+    margin: -2px 8px 0 0;
+}
+
+.menu li a:hover {
+    color: #fff;
+}
+
+.menu li a.backHome {
+    font-size: 8.3rem;
+    color: #fff;
+
+    margin-left: 62px;
+    margin-bottom: .75em;
+    margin-top: 1.5rem;
+}
+
+.menu li a.menuContact {
+    margin: 4em 0 4em 50px;
+}
+
+.socialmedias {
+    width: 100%;
+
+    position: absolute;
+    bottom: 1em;
+    left: 0;
+}
+
+.socialmedias ul {
+    text-align: center;
+
+    width: 100%;
+    padding: 0;
+    margin: 0.9em 0 0;
+
+    list-style-type: none;
+}
+
+.socialmedias li {
+    display: inline-block;
+}
+
+.socialmedias a {
+    color: #6f6f6f;
+    font-size: 2rem;
+
+    @mixin transition(color, .2s);
+}
+
+.socialmedias a:hover {
+    color: #fff;
+}
+
+.menuToggle {
+    position: fixed;
+    top: 46px;
+    left: 15px;
+    z-index: 9000;
+
+    @mixin transition(left, .2s);
+}
+
+.menuToggle a {
+    text-decoration: none;
+
+    position: relative;
+
+    @mixin transition(top, .3s);
+}
+
+.menuToggle span {
+    content: "";
+    background-color: #525252;
+
+    display: block;
+    width: 20px;
+    height: 3px;
+    margin-top: 3px;
+
+    position: relative;
+    top: 2px;
+    left: 0;
+
+    @mixin transition(all, .3s);
+}
+
+/* -> Menu for mobile */
+
+@media (max-width: 649px) {
+    .sidebar{
+        background-color: C_STRIPE_DARK;
+
+        width: 100%;
+        height: auto;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5000;
+    }
+
+    .sidebar:hover ~ .content,
+    .sidebar.active ~ .content {
+        width: 100%;
+    }
+
+    .sidebar:hover ~ .content .withLogo span,
+    .sidebar.active ~ .content .withLogo span {
+        @mixin opacity(1);
+    }
+
+    .sidebar:hover ~ .menu,
+    .sidebar.active ~ .menu {
+        color: #fff;
+    }
+
+    .sidebar:hover ~ .menuToggle,
+    .sidebar.active ~ .menuToggle {
+        left: auto;
+    }
+
+    .sidebar nav {
+        display: none;
+
+        @mixin transition(all, .2s);
+    }
+
+    .sidebar.active nav {
+        display: block;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 12px 20px 9px;
+        margin-left: 0;
+        border-bottom: 1px solid #333;
+
+        @mixin transition(color, .2s);
+    }
+
+    .menu ul ul {
+        margin-bottom: 0;
+    }
+
+    .menu ul ul a {
+        padding: 12px 20px 9px;
+    }
+
+    .menu li.menuStart a {
+        border-top: 1px solid #333;
+    }
+
+    .menu li a.menuContact {
+        margin: 0;
+    }
+
+    .menu li a.backHome {
+        text-align: center;
+
+        margin-left: 0;
+        margin-bottom: 10px;
+        border-bottom: none;
+    }
+
+    .menu li a:hover {
+        background-color: #333;
+    }
+
+    .menu li a.backHome:hover {
+        background-color: C_STRIPE_DARK;
+    }
+
+    .socialmedias {
+        position: relative;
+        bottom: 5px;
+    }
+
+    .socialmedias li {
+        margin: 5px 3px 8px;
+    }
+
+    .socialmedias a {
+        font-size: 3rem;
+    }
+
+    .menuToggle {
+        background-color: C_STRIPE_DARK;
+
+        width: 100%;
+        height: 32px;
+
+        position: fixed;
+        left: auto;
+        right: 0;
+        top: 0;
+    }
+
+    .menuToggle a {
+        position: absolute;
+        top: 3px;
+        right: 6px;
+    }
+}
+
+/* -> Main -- */
+
+.header{
+    height: 750px;
+}
+
+.content {
+    width: calc(100% - 50px);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    overflow: hidden;
+
+    @mixin transition(width, 0.4s);
+}
+
+@media (max-width: 649px) {
+    .header{
+        height: 350px;
+    }
+
+    .content {
+        width: 100%;
+
+        position: relative;
+        top: 27px;
+    }
+}
+
+.content .main,
+.content footer {
+    @mixin transition(margin, 0.4s);
+}
+
+.content .homeLogo {
+    color: #000;
+    font-size: 5rem;
+
+    margin: 0;
+
+    position: absolute;
+    top: 25px;
+    left: 49px;
+    z-index: 1;
+
+    @mixin transition(all, 0.4s);
+}
+
+.content .breadcrumb {
+    color: #000;
+    font-size: 1.3rem;
+
+    margin: 0;
+
+    position: absolute;
+    top: 48px;
+    left: 108px;
+    z-index: 1;
+
+    @mixin transition(all, 0.4s);
+}
+
+.breadcrumb ul {
+    font-family: "geometriaBold";
+
+    display: inline-block;
+    padding: 0;
+}
+
+.breadcrumb li {
+    font-size: 1.3rem;
+
+    display: inline;
+}
+
+.breadcrumb li::before {
+    content: ">";
+    padding-right: 3px;
+}
+
+.breadcrumb li:first-child::before {
+    content: normal;
+    padding-right: 0;
+}
+
+@media (max-width: 649px) {
+    .content .homeLogo {
+        display: none;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+}
+
+.content .linkTopRight {
+    position: absolute;
+    top: 41px;
+    right: 0;
+    z-index: 99999;
+}
+
+.content .linkTopRight a {
+    color: C_TEXT;
+}
+
+.content .language {
+    font-family: "geometriaBold", Arial, sans-serif;
+
+    display: inline-block;
+
+    cursor: pointer;
+}
+
+.content .github {
+    font-size: 2.2rem;
+
+    display: inline-block;
+
+    cursor: pointer;
+}
+
+@media (max-width: 649px) {
+    .content .linkTopRight {
+        top: 20px;
+    }
+
+    .content .language {
+        margin-right: 10px;
+    }
+}
+
+.focusBlock {
+    text-align: center;
+
+    padding-top: 4rem;
+}
+
+.focusBlock p {
+    font-family: "geometriaLight", Arial, sans-serif;
+    font-size: 2.5rem;
+}
+
+@media (max-width: 979px) {
+    .focusBlock p {
+        font-size: 1.8rem;
+    }
+}
+
+/* -> Sections -- */
+
+.stripe {
+    padding: 60px 0;
+
+    position: relative;
+}
+
+.stripe.light {
+    background-color: C_STRIPE_LIGHT;
+}
+
+.stripe.medium1 {
+    background-color: C_STRIPE_MEDIUM1;
+}
+
+.stripe.medium2 {
+    background-color: C_STRIPE_MEDIUM2;
+}
+
+.stripe.medium3 {
+    background-color: C_STRIPE_MEDIUM3;
+}
+
+.stripe.dark {
+    background-color: C_STRIPE_DARK;
+    color: C_TEXT_LIGHT;
+}
+
+.stripe.dark .accent {
+    color: C_TEXT_LIGHT;
+}
+
+.stripe.colored {
+    background-color: C_STRIPE_COLORED;
+}
+
+.stripeLast {
+    padding-top: 0;
+}
+
+.sloganSide {
+    margin-top: 9.4em;
+}
+
+.triangleBottom {
+    padding-bottom: 0;
+}
+
+.triangleBottom::after {
+    content: "";
+
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left: -1500px;
+    margin-top: -100px;
+    border: 0 solid transparent;
+    border-top-width: 200px;
+    border-right-width: 1500px;
+    border-left-width: 1500px;
+
+    position: relative;
+    right: 0;
+    left: 50%;
+    bottom: 0;
+}
+
+.light.triangleBottom::after {
+    border-top-color: C_STRIPE_LIGHT;
+}
+
+.dark.triangleBottom::after {
+    border-top-color: C_STRIPE_DARK;
+}
+
+.colored.triangleBottom::after {
+    border-top-color: C_STRIPE_COLORED;
+}
+
+.nextLight.triangleBottom::after {
+    background-color: C_STRIPE_LIGHT;
+}
+
+.nextDark.triangleBottom::after {
+    background-color: C_STRIPE_DARK;
+}
+
+.nextColored.triangleBottom::after {
+    background-color: C_STRIPE_COLORED;
+}
+
+@media (max-width: 649px) {
+    .stripe {
+        padding: 30px 0;
+    }
+
+    .stripeLast {
+        padding-top: 0;
+    }
+
+    .sloganSide {
+        margin-top: 2em;
+    }
+
+    .triangleBottom {
+        padding-bottom: 0;
+    }
+
+    .triangleBottom::after {
+        border-top-width: 150px;
+    }
+}
+
+/* -> Carousel -- */
+
+.products h2 + p span {
+    display: block;
+}
+
+.productsCarousel ul {
+    padding: 0;
+}
+
+.productsCarousel li {
+    line-height: 1em;
+
+    display: inline-block;
+    width: 19%;
+
+    vertical-align: middle;
+}
+
+.productsCarousel a {
+    color: transparent;
+    font-size: 10.25rem;
+
+    display: block;
+    min-height: 30rem;
+    padding-top: 55px;
+
+    @mixin transition(all, 0.3s);
+}
+
+.productsCarousel a h3 {
+    font-family: "geometria";
+    font-size: 4rem;
+
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.productsCarousel a.active,
+.productsCarousel a:hover {
+    font-size: 16rem;
+    color: C_TEXT;
+
+    padding-top: 0;
+
+    @mixin transition(all, 0.3s);
+}
+
+.productsCarousel a:before {
+    color: #eaebeb;
+}
+
+.productsCarousel a.gae:hover:before,
+.productsCarousel a.gae.active:before {
+    color: C_PRODUCT_GAE;
+}
+
+.productsCarousel a.jukito:hover:before,
+.productsCarousel a.jukito.active:before {
+    color: C_PRODUCT_JUKITO;
+}
+
+.productsCarousel a.gwtp:hover:before,
+.productsCarousel a.gwtp.active:before {
+    color: C_PRODUCT_GWTP;
+}
+
+.productsCarousel a.chosen:hover:before,
+.productsCarousel a.chosen.active:before {
+    color: C_PRODUCT_CHOSEN;
+}
+
+.productsCarousel a.gquery:hover:before,
+.productsCarousel a.gquery.active:before {
+    color: C_PRODUCT_GQUERY;
+}
+
+@media(max-width: 979px) {
+    .productsCarousel a {
+        font-size: 9rem;
+    }
+
+    .productsCarousel a.active,
+    .productsCarousel a:hover {
+        font-size: 12rem;
+    }
+}
+
+/* -> Footer -- */
+
+.footer {
+    background-color: C_STRIPE_DARK;
+    color: C_TEXT_LIGHT;
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+
+    padding: 2em;
+
+    position: relative;
+}
+
+.footer .backTop i {
+    font-size: 2.5rem;
+    color: C_TEXT;
+
+    margin-left: -12px;
+
+    position: absolute;
+    top: -22px;
+    left: 50%;
+
+    cursor: pointer;
+
+    @mixin rotate(180deg);
+}
+
+.footer p {
+    font-size: 1rem;
+}
+
+.footer i {
+    font-size: 4rem;
+
+    display: block;
+    margin: -10px 0 3px;
+}
+
+.footer span {
+    text-indent: -9999px;
+}

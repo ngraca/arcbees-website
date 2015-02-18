@@ -1,5 +1,7 @@
 /.idea
 target/
-arcbeeswebsite.iml
+*.iml
 extras/
 .gitignore
+/gen
+.DS_Store
